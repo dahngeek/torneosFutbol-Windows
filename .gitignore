@@ -1,0 +1,16 @@
+.vs
+./.vs
+/.vs
+*.csproj.user
+/TP4-TORNEOS/bin
+/TP4-TORNEOS/obj
+TP4-TORNEOS/bin
+TP4-TORNEOS/obj
+./TP4-TORNEOS/bin
+./TP4-TORNEOS/obj
+/TP4-TORNEOS/bin/
+/TP4-TORNEOS/obj/
+TP4-TORNEOS/bin/
+TP4-TORNEOS/obj/
+./TP4-TORNEOS/bin/
+./TP4-TORNEOS/obj/
