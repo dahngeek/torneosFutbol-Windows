@@ -3,7 +3,7 @@
 	partial class fmCrearJug
 	{
 		/// <summary>
-		/// Required designer variable.
+		/// Required designer audioBoton.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 
