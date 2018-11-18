@@ -60,11 +60,6 @@ namespace TP4_TORNEOS
 			label6.Location = pos6;
 			label6.BackColor = Color.Transparent;
 
-			var pos7 = this.PointToScreen(label7.Location);
-			pos7 = tarjetaJugador.PointToClient(pos7);
-			label7.Parent = tarjetaJugador;
-			label7.Location = pos7;
-			label7.BackColor = Color.Transparent;
 
 			var pos8 = this.PointToScreen(label8.Location);
 			pos8 = tarjetaJugador.PointToClient(pos8);
@@ -162,5 +157,10 @@ namespace TP4_TORNEOS
 		{
 
 		}
-	}
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
