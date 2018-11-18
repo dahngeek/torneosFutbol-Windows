@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
-using P_4m2.Entidades;
+using TP4_TORNEOS.Entidades;
 
 
-namespace P_4m2.Controladores
+namespace TP4_TORNEOS.Controladores
 {
     class pJugador
     {

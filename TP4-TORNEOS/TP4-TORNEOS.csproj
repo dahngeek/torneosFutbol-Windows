@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Controladores\Conexion.cs" />
     <Compile Include="Controladores\pArbitro.cs" />
+    <Compile Include="Controladores\pCambiosEncuentro.cs" />
     <Compile Include="Controladores\pConfiguracion.cs" />
     <Compile Include="Controladores\pDirectorTecnico.cs" />
     <Compile Include="Controladores\pEncuentro.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Controladores\pTarjetaJugador.cs" />
     <Compile Include="Controladores\pTipoTarjeta.cs" />
     <Compile Include="Entidades\Arbitro.cs" />
+    <Compile Include="Entidades\CambiosEncuentro.cs" />
     <Compile Include="Entidades\Configuracion.cs" />
     <Compile Include="Entidades\DirectorTecnico.cs" />
     <Compile Include="Entidades\Encuentro.cs" />

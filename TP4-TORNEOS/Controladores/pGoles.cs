@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
-using P_4m2.Entidades;
+using TP4_TORNEOS.Entidades;
 
-namespace P_4m2.Controladores
+namespace TP4_TORNEOS.Controladores
 {
     class pGoles
     {
@@ -172,7 +172,7 @@ namespace P_4m2.Controladores
         public static void Update(Goles g)
         {
             //Creo el comando sql a utlizar
-            SQLiteCommand cmd = new SQLiteCommand("UPDATE Equipo SET idJugador = @idJugador, idEncuentro = @idEncuentro, minuto = @minuto WHERE id = @id;");
+            SQLiteCommand cmd = new SQLiteCommand("UPDATE Goles SET idJugador = @idJugador, idEncuentro = @idEncuentro, minuto = @minuto WHERE id = @id;");
             //Cargo el valor del parametro
             cmd.Parameters.Add(new SQLiteParameter("@id", g.Id));
             cmd.Parameters.Add(new SQLiteParameter("@idJugador", g.Jugador.Id));

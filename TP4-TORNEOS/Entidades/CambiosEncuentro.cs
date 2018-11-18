@@ -6,29 +6,33 @@ using System.Threading.Tasks;
 
 namespace TP4_TORNEOS.Entidades
 {
-    class Goles
+    class CambiosEncuentro
     {
         int id;
-        Jugador jugador;
+        Jugador jugadorSaliente;
+        Jugador jugadorEntrante;
         Encuentro encuentro;
         int minuto;
 
-        public Goles()
+        public CambiosEncuentro()
         {
 
         }
 
-        public Goles(int id, Jugador jugador, Encuentro encuentro, int minuto)
+
+        public CambiosEncuentro(int id, Jugador jugadorSaliente, Jugador jugadorEntrante, Encuentro encuentro, int minuto)
         {
             this.Id = id;
-            this.Jugador = jugador;
+            this.JugadorSaliente = jugadorSaliente;
+            this.JugadorEntrante = jugadorEntrante;
             this.Encuentro = encuentro;
             this.Minuto = minuto;
         }
 
         public int Id { get => id; set => id = value; }
         public int Minuto { get => minuto; set => minuto = value; }
-        internal Jugador Jugador { get => jugador; set => jugador = value; }
+        internal Jugador JugadorSaliente { get => jugadorSaliente; set => jugadorSaliente = value; }
+        internal Jugador JugadorEntrante { get => jugadorEntrante; set => jugadorEntrante = value; }
         internal Encuentro Encuentro { get => encuentro; set => encuentro = value; }
     }
 }

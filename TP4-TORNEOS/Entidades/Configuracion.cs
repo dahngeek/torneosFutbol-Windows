@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P_4m2.Entidades
+namespace TP4_TORNEOS.Entidades
 {
     class Configuracion
     {

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
-using P_4m2.Entidades;
+using TP4_TORNEOS.Entidades;
 
 
-namespace P_4m2.Controladores
+namespace TP4_TORNEOS.Controladores
 {
     class pTarjetaJugador
     {
@@ -84,7 +84,7 @@ namespace P_4m2.Controladores
             List<TarjetaJugador> tarjetasjugadores = new List<TarjetaJugador>();
             //Creo el comando sql a utlizar
             SQLiteCommand cmd =
-                new SQLiteCommand("SELECT id, idTarjeta, idJugador, idEncuentro, minuto From Goles WHERE idTarjeta = @idTarjeta;");
+                new SQLiteCommand("SELECT id, idTarjeta, idJugador, idEncuentro, minuto From TarjetaJugador WHERE idTarjeta = @idTarjeta;");
 
             cmd.Parameters.Add(new SQLiteParameter("@idTarjeta", idTarjeta));
 

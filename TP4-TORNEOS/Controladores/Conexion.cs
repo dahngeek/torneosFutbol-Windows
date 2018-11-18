@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SQLite;
 
 
-namespace P_4m2.Controladores
+namespace TP4_TORNEOS.Controladores
 {
     class Conexion
     {
