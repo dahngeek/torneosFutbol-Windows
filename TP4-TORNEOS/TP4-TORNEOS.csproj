@@ -56,6 +56,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\Conexion.cs" />
+    <Compile Include="Controladores\pArbitro.cs" />
+    <Compile Include="Controladores\pConfiguracion.cs" />
+    <Compile Include="Controladores\pDirectorTecnico.cs" />
+    <Compile Include="Controladores\pEncuentro.cs" />
+    <Compile Include="Controladores\pEquipo.cs" />
+    <Compile Include="Controladores\pGoles.cs" />
+    <Compile Include="Controladores\pJugador.cs" />
+    <Compile Include="Controladores\pPosicion.cs" />
+    <Compile Include="Controladores\pTarjetaJugador.cs" />
+    <Compile Include="Controladores\pTipoTarjeta.cs" />
+    <Compile Include="Entidades\Arbitro.cs" />
+    <Compile Include="Entidades\Configuracion.cs" />
+    <Compile Include="Entidades\DirectorTecnico.cs" />
+    <Compile Include="Entidades\Encuentro.cs" />
+    <Compile Include="Entidades\Equipo.cs" />
+    <Compile Include="Entidades\Goles.cs" />
+    <Compile Include="Entidades\Jugador.cs" />
+    <Compile Include="Entidades\Posicion.cs" />
+    <Compile Include="Entidades\TarjetaJugador.cs" />
+    <Compile Include="Entidades\TipoTarjeta.cs" />
     <Compile Include="fmCrearJug.cs">
       <SubType>Form</SubType>
     </Compile>
