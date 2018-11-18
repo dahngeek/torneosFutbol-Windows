@@ -30,8 +30,56 @@ namespace TP4_TORNEOS
             labelNombre.Location = pos;
             labelNombre.BackColor = Color.Transparent;
 
-            //Cargar imagen de jugador
-            pictureBox1.Load("https://cdn.sofifa.org/players/10/19/158023.png");
+			var pos2 = this.PointToScreen(label2.Location);
+			pos2 = tarjetaJugador.PointToClient(pos2);
+			label2.Parent = tarjetaJugador;
+			label2.Location = pos2;
+			label2.BackColor = Color.Transparent;
+
+			var pos3 = this.PointToScreen(label3.Location);
+			pos3 = tarjetaJugador.PointToClient(pos3);
+			label3.Parent = tarjetaJugador;
+			label3.Location = pos3;
+			label3.BackColor = Color.Transparent;
+
+			var pos4 = this.PointToScreen(label4.Location);
+			pos4 = tarjetaJugador.PointToClient(pos4);
+			label4.Parent = tarjetaJugador;
+			label4.Location = pos4;
+			label4.BackColor = Color.Transparent;
+
+			var pos5 = this.PointToScreen(label5.Location);
+			pos5 = tarjetaJugador.PointToClient(pos5);
+			label5.Parent = tarjetaJugador;
+			label5.Location = pos5;
+			label5.BackColor = Color.Transparent;
+
+			var pos6 = this.PointToScreen(label6.Location);
+			pos6 = tarjetaJugador.PointToClient(pos6);
+			label6.Parent = tarjetaJugador;
+			label6.Location = pos6;
+			label6.BackColor = Color.Transparent;
+
+			var pos7 = this.PointToScreen(label7.Location);
+			pos7 = tarjetaJugador.PointToClient(pos7);
+			label7.Parent = tarjetaJugador;
+			label7.Location = pos7;
+			label7.BackColor = Color.Transparent;
+
+			var pos8 = this.PointToScreen(label8.Location);
+			pos8 = tarjetaJugador.PointToClient(pos8);
+			label8.Parent = tarjetaJugador;
+			label8.Location = pos8;
+			label8.BackColor = Color.Transparent;
+
+			var pos9 = this.PointToScreen(label9.Location);
+			pos9 = tarjetaJugador.PointToClient(pos9);
+			label9.Parent = tarjetaJugador;
+			label9.Location = pos9;
+			label9.BackColor = Color.Transparent;
+
+			//Cargar imagen de jugador
+			pictureBox1.Load("https://cdn.sofifa.org/players/10/19/158023.png");
             pos = this.PointToScreen(pictureBox1.Location);
             pos = tarjetaJugador.PointToClient(pos);
             pictureBox1.Parent = tarjetaJugador;
@@ -109,5 +157,10 @@ namespace TP4_TORNEOS
         {
 
         }
-    }
+
+		private void labelNombre_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
