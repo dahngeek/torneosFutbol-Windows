@@ -82,6 +82,12 @@
     <Compile Include="Entidades\Posicion.cs" />
     <Compile Include="Entidades\TarjetaJugador.cs" />
     <Compile Include="Entidades\TipoTarjeta.cs" />
+    <Compile Include="fmArbitro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmArbitro.Designer.cs">
+      <DependentUpon>fmArbitro.cs</DependentUpon>
+    </Compile>
     <Compile Include="fmCrearJug.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fmArbitro.resx">
+      <DependentUpon>fmArbitro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmCrearJug.es-AR.resx">
       <DependentUpon>fmCrearJug.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +146,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\TP4_TORNEOS.Entidades.Arbitro.datasource" />
+    <None Include="Properties\DataSources\TP4_TORNEOS.Entidades.CambiosEncuentro.datasource" />
+    <None Include="Properties\DataSources\TP4_TORNEOS.Entidades.Configuracion.datasource" />
+    <None Include="Properties\DataSources\TP4_TORNEOS.Entidades.DirectorTecnico.datasource" />
+    <None Include="Properties\DataSources\TP4_TORNEOS.Entidades.Encuentro.datasource" />
+    <None Include="Properties\DataSources\TP4_TORNEOS.Entidades.Equipo.datasource" />
+    <None Include="Properties\DataSources\TP4_TORNEOS.Entidades.Goles.datasource" />
+    <None Include="Properties\DataSources\TP4_TORNEOS.Entidades.Jugador.datasource" />
+    <None Include="Properties\DataSources\TP4_TORNEOS.Entidades.Posicion.datasource" />
+    <None Include="Properties\DataSources\TP4_TORNEOS.Entidades.TarjetaJugador.datasource" />
+    <None Include="Properties\DataSources\TP4_TORNEOS.Entidades.TipoTarjeta.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

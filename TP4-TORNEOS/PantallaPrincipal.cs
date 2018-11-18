@@ -53,7 +53,7 @@ namespace TP4_TORNEOS
 
 		private void metroTile1_Click_1(object sender, EventArgs e)
 		{
-
+            new fmArbitro().ShowDialog();
 		}
 
 		private void metroTabPage3_Click(object sender, EventArgs e)
