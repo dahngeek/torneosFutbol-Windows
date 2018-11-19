@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP4_TORNEOS.Controladores;
+using TP4_TORNEOS.Entidades;
 
 namespace TP4_TORNEOS
 {
@@ -15,6 +17,32 @@ namespace TP4_TORNEOS
         public TablaPosicionesEquipos()
         {
             InitializeComponent();
+            equipoBindingSource.DataSource = OrdenaEquipos();
         }
+
+        private void equipoBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private List<Equipo> OrdenaEquipos()
+        {
+            List<Equipo> equipos = new List<Equipo>();
+            equipos = pEquipo.GetAll();
+            for (int i = 0; i < equipos.Count - 1; i++)
+            {
+                if (equipos[i].Puntos < equipos[i + 1].Puntos)
+                {
+                    Equipo e = new Equipo();
+                    e = equipos[i];
+                    equipos[i] = equipos[i + 1];
+                    equipos[i + 1] = e;
+                }
+            }
+
+            return equipos;
+        }
+
     }
 }
