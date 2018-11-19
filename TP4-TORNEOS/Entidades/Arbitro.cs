@@ -25,6 +25,10 @@ namespace TP4_TORNEOS.Entidades
             this.Apellido = apellido;
         }
 
+        public override string ToString() {
+            return this.Nombre + " " + this.Apellido;
+        }
+
         public int Id { get => id; set => id = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
