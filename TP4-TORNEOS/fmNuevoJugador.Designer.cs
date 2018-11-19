@@ -28,276 +28,186 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
+			System.Windows.Forms.Label numeroCamisetaLabel;
+			System.Windows.Forms.Label apellidoLabel;
+			System.Windows.Forms.Label urlImagenLabel;
+			System.Windows.Forms.Label nombreLabel;
+			System.Windows.Forms.Label apodoLabel;
 			this.mBtAceptar = new MetroFramework.Controls.MetroButton();
 			this.mBtCancelar = new MetroFramework.Controls.MetroButton();
-			this.mTbdataNombre = new MetroFramework.Controls.MetroTextBox();
-			this.mTbdataApellido = new MetroFramework.Controls.MetroTextBox();
-			this.mTbdataApodo = new MetroFramework.Controls.MetroTextBox();
-			this.mTbdataPosicion = new MetroFramework.Controls.MetroTextBox();
-			this.mTbdataEquipo = new MetroFramework.Controls.MetroTextBox();
-			this.mTbdataNumCamiseta = new MetroFramework.Controls.MetroTextBox();
-			this.mTbPosicion = new MetroFramework.Controls.MetroTextBox();
-			this.mTbEquipo = new MetroFramework.Controls.MetroTextBox();
-			this.mTbNumcamiseta = new MetroFramework.Controls.MetroTextBox();
-			this.mTbApodo = new MetroFramework.Controls.MetroTextBox();
-			this.mTbApellido = new MetroFramework.Controls.MetroTextBox();
-			this.mTbNombre = new MetroFramework.Controls.MetroTextBox();
-			this.mTbImagen = new MetroFramework.Controls.MetroTextBox();
-			this.mTbdataImagen = new MetroFramework.Controls.MetroTextBox();
+			this.numeroCamisetaTextBox = new System.Windows.Forms.TextBox();
+			this.apodoTextBox = new System.Windows.Forms.TextBox();
+			this.nombreTextBox = new System.Windows.Forms.TextBox();
+			this.urlImagenTextBox = new System.Windows.Forms.TextBox();
+			this.apellidoTextBox = new System.Windows.Forms.TextBox();
+			this.equipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.equipoComboBox = new System.Windows.Forms.ComboBox();
+			this.posicionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.posicionComboBox = new System.Windows.Forms.ComboBox();
+			numeroCamisetaLabel = new System.Windows.Forms.Label();
+			apellidoLabel = new System.Windows.Forms.Label();
+			urlImagenLabel = new System.Windows.Forms.Label();
+			nombreLabel = new System.Windows.Forms.Label();
+			apodoLabel = new System.Windows.Forms.Label();
+			((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.posicionBindingSource)).BeginInit();
 			this.SuspendLayout();
+			// 
+			// numeroCamisetaLabel
+			// 
+			numeroCamisetaLabel.AutoSize = true;
+			numeroCamisetaLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			numeroCamisetaLabel.Location = new System.Drawing.Point(267, 188);
+			numeroCamisetaLabel.Name = "numeroCamisetaLabel";
+			numeroCamisetaLabel.Size = new System.Drawing.Size(124, 17);
+			numeroCamisetaLabel.TabIndex = 11;
+			numeroCamisetaLabel.Text = "Numero Camiseta:";
+			// 
+			// apellidoLabel
+			// 
+			apellidoLabel.AutoSize = true;
+			apellidoLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			apellidoLabel.Location = new System.Drawing.Point(267, 128);
+			apellidoLabel.Name = "apellidoLabel";
+			apellidoLabel.Size = new System.Drawing.Size(62, 17);
+			apellidoLabel.TabIndex = 3;
+			apellidoLabel.Text = "Apellido:";
+			// 
+			// urlImagenLabel
+			// 
+			urlImagenLabel.AutoSize = true;
+			urlImagenLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			urlImagenLabel.Location = new System.Drawing.Point(267, 216);
+			urlImagenLabel.Name = "urlImagenLabel";
+			urlImagenLabel.Size = new System.Drawing.Size(80, 17);
+			urlImagenLabel.TabIndex = 13;
+			urlImagenLabel.Text = "Url Imagen:";
+			// 
+			// nombreLabel
+			// 
+			nombreLabel.AutoSize = true;
+			nombreLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			nombreLabel.Location = new System.Drawing.Point(267, 100);
+			nombreLabel.Name = "nombreLabel";
+			nombreLabel.Size = new System.Drawing.Size(62, 17);
+			nombreLabel.TabIndex = 9;
+			nombreLabel.Text = "Nombre:";
+			// 
+			// apodoLabel
+			// 
+			apodoLabel.AutoSize = true;
+			apodoLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			apodoLabel.Location = new System.Drawing.Point(267, 156);
+			apodoLabel.Name = "apodoLabel";
+			apodoLabel.Size = new System.Drawing.Size(53, 17);
+			apodoLabel.TabIndex = 5;
+			apodoLabel.Text = "Apodo:";
 			// 
 			// mBtAceptar
 			// 
-			this.mBtAceptar.Location = new System.Drawing.Point(159, 350);
+			this.mBtAceptar.Location = new System.Drawing.Point(193, 460);
 			this.mBtAceptar.Name = "mBtAceptar";
 			this.mBtAceptar.Size = new System.Drawing.Size(114, 32);
 			this.mBtAceptar.TabIndex = 0;
 			this.mBtAceptar.Text = "Aceptar";
+			this.mBtAceptar.Theme = MetroFramework.MetroThemeStyle.Dark;
 			this.mBtAceptar.UseSelectable = true;
 			this.mBtAceptar.Click += new System.EventHandler(this.mBtAceptar_Click);
 			// 
 			// mBtCancelar
 			// 
-			this.mBtCancelar.Location = new System.Drawing.Point(474, 350);
+			this.mBtCancelar.Location = new System.Drawing.Point(508, 460);
 			this.mBtCancelar.Name = "mBtCancelar";
 			this.mBtCancelar.Size = new System.Drawing.Size(114, 32);
 			this.mBtCancelar.TabIndex = 1;
 			this.mBtCancelar.Text = "Cancelar";
+			this.mBtCancelar.Theme = MetroFramework.MetroThemeStyle.Dark;
 			this.mBtCancelar.UseSelectable = true;
+			this.mBtCancelar.Click += new System.EventHandler(this.mBtCancelar_Click);
 			// 
-			// mTbdataNombre
+			// numeroCamisetaTextBox
 			// 
-			this.mTbdataNombre.Lines = new string[] {
-        "Nombre: "};
-			this.mTbdataNombre.Location = new System.Drawing.Point(159, 99);
-			this.mTbdataNombre.MaxLength = 32767;
-			this.mTbdataNombre.Name = "mTbdataNombre";
-			this.mTbdataNombre.PasswordChar = '\0';
-			this.mTbdataNombre.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.mTbdataNombre.SelectedText = "";
-			this.mTbdataNombre.Size = new System.Drawing.Size(91, 23);
-			this.mTbdataNombre.TabIndex = 2;
-			this.mTbdataNombre.Text = "Nombre: ";
-			this.mTbdataNombre.UseSelectable = true;
+			this.numeroCamisetaTextBox.Location = new System.Drawing.Point(397, 185);
+			this.numeroCamisetaTextBox.Name = "numeroCamisetaTextBox";
+			this.numeroCamisetaTextBox.Size = new System.Drawing.Size(100, 22);
+			this.numeroCamisetaTextBox.TabIndex = 12;
 			// 
-			// mTbdataApellido
+			// apodoTextBox
 			// 
-			this.mTbdataApellido.Lines = new string[] {
-        "Apellido: "};
-			this.mTbdataApellido.Location = new System.Drawing.Point(159, 128);
-			this.mTbdataApellido.MaxLength = 32767;
-			this.mTbdataApellido.Name = "mTbdataApellido";
-			this.mTbdataApellido.PasswordChar = '\0';
-			this.mTbdataApellido.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.mTbdataApellido.SelectedText = "";
-			this.mTbdataApellido.Size = new System.Drawing.Size(91, 23);
-			this.mTbdataApellido.TabIndex = 3;
-			this.mTbdataApellido.Text = "Apellido: ";
-			this.mTbdataApellido.UseSelectable = true;
+			this.apodoTextBox.Location = new System.Drawing.Point(397, 153);
+			this.apodoTextBox.Name = "apodoTextBox";
+			this.apodoTextBox.Size = new System.Drawing.Size(100, 22);
+			this.apodoTextBox.TabIndex = 6;
 			// 
-			// mTbdataApodo
+			// nombreTextBox
 			// 
-			this.mTbdataApodo.Lines = new string[] {
-        "Apodo: "};
-			this.mTbdataApodo.Location = new System.Drawing.Point(159, 157);
-			this.mTbdataApodo.MaxLength = 32767;
-			this.mTbdataApodo.Name = "mTbdataApodo";
-			this.mTbdataApodo.PasswordChar = '\0';
-			this.mTbdataApodo.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.mTbdataApodo.SelectedText = "";
-			this.mTbdataApodo.Size = new System.Drawing.Size(91, 23);
-			this.mTbdataApodo.TabIndex = 4;
-			this.mTbdataApodo.Text = "Apodo: ";
-			this.mTbdataApodo.UseSelectable = true;
+			this.nombreTextBox.Location = new System.Drawing.Point(397, 95);
+			this.nombreTextBox.Name = "nombreTextBox";
+			this.nombreTextBox.Size = new System.Drawing.Size(100, 22);
+			this.nombreTextBox.TabIndex = 10;
 			// 
-			// mTbdataPosicion
+			// urlImagenTextBox
 			// 
-			this.mTbdataPosicion.Lines = new string[] {
-        "Posicion: "};
-			this.mTbdataPosicion.Location = new System.Drawing.Point(159, 241);
-			this.mTbdataPosicion.MaxLength = 32767;
-			this.mTbdataPosicion.Name = "mTbdataPosicion";
-			this.mTbdataPosicion.PasswordChar = '\0';
-			this.mTbdataPosicion.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.mTbdataPosicion.SelectedText = "";
-			this.mTbdataPosicion.Size = new System.Drawing.Size(91, 23);
-			this.mTbdataPosicion.TabIndex = 7;
-			this.mTbdataPosicion.Text = "Posicion: ";
-			this.mTbdataPosicion.UseSelectable = true;
-			this.mTbdataPosicion.Click += new System.EventHandler(this.metroTextBox3_Click);
+			this.urlImagenTextBox.Location = new System.Drawing.Point(397, 213);
+			this.urlImagenTextBox.Name = "urlImagenTextBox";
+			this.urlImagenTextBox.Size = new System.Drawing.Size(100, 22);
+			this.urlImagenTextBox.TabIndex = 14;
 			// 
-			// mTbdataEquipo
+			// apellidoTextBox
 			// 
-			this.mTbdataEquipo.Lines = new string[] {
-        "Equipo: "};
-			this.mTbdataEquipo.Location = new System.Drawing.Point(159, 212);
-			this.mTbdataEquipo.MaxLength = 32767;
-			this.mTbdataEquipo.Name = "mTbdataEquipo";
-			this.mTbdataEquipo.PasswordChar = '\0';
-			this.mTbdataEquipo.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.mTbdataEquipo.SelectedText = "";
-			this.mTbdataEquipo.Size = new System.Drawing.Size(91, 23);
-			this.mTbdataEquipo.TabIndex = 6;
-			this.mTbdataEquipo.Text = "Equipo: ";
-			this.mTbdataEquipo.UseSelectable = true;
-			this.mTbdataEquipo.Click += new System.EventHandler(this.metroTextBox4_Click);
+			this.apellidoTextBox.Location = new System.Drawing.Point(397, 125);
+			this.apellidoTextBox.Name = "apellidoTextBox";
+			this.apellidoTextBox.Size = new System.Drawing.Size(100, 22);
+			this.apellidoTextBox.TabIndex = 4;
 			// 
-			// mTbdataNumCamiseta
+			// equipoBindingSource
 			// 
-			this.mTbdataNumCamiseta.Lines = new string[] {
-        "Num Camiseta: "};
-			this.mTbdataNumCamiseta.Location = new System.Drawing.Point(159, 184);
-			this.mTbdataNumCamiseta.MaxLength = 32767;
-			this.mTbdataNumCamiseta.Name = "mTbdataNumCamiseta";
-			this.mTbdataNumCamiseta.PasswordChar = '\0';
-			this.mTbdataNumCamiseta.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.mTbdataNumCamiseta.SelectedText = "";
-			this.mTbdataNumCamiseta.Size = new System.Drawing.Size(91, 23);
-			this.mTbdataNumCamiseta.TabIndex = 5;
-			this.mTbdataNumCamiseta.Text = "Num Camiseta: ";
-			this.mTbdataNumCamiseta.UseSelectable = true;
-			this.mTbdataNumCamiseta.Click += new System.EventHandler(this.metroTextBox5_Click);
+			this.equipoBindingSource.DataSource = typeof(TP4_TORNEOS.Entidades.Equipo);
 			// 
-			// mTbPosicion
+			// equipoComboBox
 			// 
-			this.mTbPosicion.Lines = new string[] {
-        "Posicion"};
-			this.mTbPosicion.Location = new System.Drawing.Point(284, 241);
-			this.mTbPosicion.MaxLength = 32767;
-			this.mTbPosicion.Name = "mTbPosicion";
-			this.mTbPosicion.PasswordChar = '\0';
-			this.mTbPosicion.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.mTbPosicion.SelectedText = "";
-			this.mTbPosicion.Size = new System.Drawing.Size(91, 23);
-			this.mTbPosicion.TabIndex = 13;
-			this.mTbPosicion.Text = "Posicion";
-			this.mTbPosicion.UseSelectable = true;
+			this.equipoComboBox.DataSource = this.equipoBindingSource;
+			this.equipoComboBox.DisplayMember = "Nombre";
+			this.equipoComboBox.FormattingEnabled = true;
+			this.equipoComboBox.Location = new System.Drawing.Point(235, 326);
+			this.equipoComboBox.Name = "equipoComboBox";
+			this.equipoComboBox.Size = new System.Drawing.Size(300, 24);
+			this.equipoComboBox.TabIndex = 14;
+			this.equipoComboBox.ValueMember = "GolesContra";
 			// 
-			// mTbEquipo
+			// posicionBindingSource
 			// 
-			this.mTbEquipo.Lines = new string[] {
-        "Equipo"};
-			this.mTbEquipo.Location = new System.Drawing.Point(284, 212);
-			this.mTbEquipo.MaxLength = 32767;
-			this.mTbEquipo.Name = "mTbEquipo";
-			this.mTbEquipo.PasswordChar = '\0';
-			this.mTbEquipo.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.mTbEquipo.SelectedText = "";
-			this.mTbEquipo.Size = new System.Drawing.Size(91, 23);
-			this.mTbEquipo.TabIndex = 12;
-			this.mTbEquipo.Text = "Equipo";
-			this.mTbEquipo.UseSelectable = true;
+			this.posicionBindingSource.DataSource = typeof(TP4_TORNEOS.Entidades.Posicion);
 			// 
-			// mTbNumcamiseta
+			// posicionComboBox
 			// 
-			this.mTbNumcamiseta.Lines = new string[] {
-        "Num Camiseta "};
-			this.mTbNumcamiseta.Location = new System.Drawing.Point(284, 184);
-			this.mTbNumcamiseta.MaxLength = 32767;
-			this.mTbNumcamiseta.Name = "mTbNumcamiseta";
-			this.mTbNumcamiseta.PasswordChar = '\0';
-			this.mTbNumcamiseta.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.mTbNumcamiseta.SelectedText = "";
-			this.mTbNumcamiseta.Size = new System.Drawing.Size(91, 23);
-			this.mTbNumcamiseta.TabIndex = 11;
-			this.mTbNumcamiseta.Text = "Num Camiseta ";
-			this.mTbNumcamiseta.UseSelectable = true;
-			// 
-			// mTbApodo
-			// 
-			this.mTbApodo.Lines = new string[] {
-        "Apodo"};
-			this.mTbApodo.Location = new System.Drawing.Point(284, 157);
-			this.mTbApodo.MaxLength = 32767;
-			this.mTbApodo.Name = "mTbApodo";
-			this.mTbApodo.PasswordChar = '\0';
-			this.mTbApodo.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.mTbApodo.SelectedText = "";
-			this.mTbApodo.Size = new System.Drawing.Size(91, 23);
-			this.mTbApodo.TabIndex = 10;
-			this.mTbApodo.Text = "Apodo";
-			this.mTbApodo.UseSelectable = true;
-			// 
-			// mTbApellido
-			// 
-			this.mTbApellido.Lines = new string[] {
-        "Apellido"};
-			this.mTbApellido.Location = new System.Drawing.Point(284, 128);
-			this.mTbApellido.MaxLength = 32767;
-			this.mTbApellido.Name = "mTbApellido";
-			this.mTbApellido.PasswordChar = '\0';
-			this.mTbApellido.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.mTbApellido.SelectedText = "";
-			this.mTbApellido.Size = new System.Drawing.Size(91, 23);
-			this.mTbApellido.TabIndex = 9;
-			this.mTbApellido.Text = "Apellido";
-			this.mTbApellido.UseSelectable = true;
-			// 
-			// mTbNombre
-			// 
-			this.mTbNombre.Lines = new string[] {
-        "Nombre"};
-			this.mTbNombre.Location = new System.Drawing.Point(284, 99);
-			this.mTbNombre.MaxLength = 32767;
-			this.mTbNombre.Name = "mTbNombre";
-			this.mTbNombre.PasswordChar = '\0';
-			this.mTbNombre.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.mTbNombre.SelectedText = "";
-			this.mTbNombre.Size = new System.Drawing.Size(91, 23);
-			this.mTbNombre.TabIndex = 8;
-			this.mTbNombre.Text = "Nombre";
-			this.mTbNombre.UseSelectable = true;
-			// 
-			// mTbImagen
-			// 
-			this.mTbImagen.Lines = new string[] {
-        "Foto"};
-			this.mTbImagen.Location = new System.Drawing.Point(284, 270);
-			this.mTbImagen.MaxLength = 32767;
-			this.mTbImagen.Name = "mTbImagen";
-			this.mTbImagen.PasswordChar = '\0';
-			this.mTbImagen.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.mTbImagen.SelectedText = "";
-			this.mTbImagen.Size = new System.Drawing.Size(91, 23);
-			this.mTbImagen.TabIndex = 15;
-			this.mTbImagen.Text = "Foto";
-			this.mTbImagen.UseSelectable = true;
-			this.mTbImagen.Click += new System.EventHandler(this.metroTextBox1_Click);
-			// 
-			// mTbdataImagen
-			// 
-			this.mTbdataImagen.Lines = new string[] {
-        "Foto:"};
-			this.mTbdataImagen.Location = new System.Drawing.Point(159, 270);
-			this.mTbdataImagen.MaxLength = 32767;
-			this.mTbdataImagen.Name = "mTbdataImagen";
-			this.mTbdataImagen.PasswordChar = '\0';
-			this.mTbdataImagen.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.mTbdataImagen.SelectedText = "";
-			this.mTbdataImagen.Size = new System.Drawing.Size(91, 23);
-			this.mTbdataImagen.TabIndex = 14;
-			this.mTbdataImagen.Text = "Foto:";
-			this.mTbdataImagen.UseSelectable = true;
+			this.posicionComboBox.DataSource = this.posicionBindingSource;
+			this.posicionComboBox.DisplayMember = "Nombre";
+			this.posicionComboBox.FormattingEnabled = true;
+			this.posicionComboBox.Location = new System.Drawing.Point(235, 381);
+			this.posicionComboBox.Name = "posicionComboBox";
+			this.posicionComboBox.Size = new System.Drawing.Size(300, 24);
+			this.posicionComboBox.TabIndex = 15;
+			this.posicionComboBox.ValueMember = "Id";
 			// 
 			// fmNuevoJugador
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.mTbImagen);
-			this.Controls.Add(this.mTbdataImagen);
-			this.Controls.Add(this.mTbPosicion);
-			this.Controls.Add(this.mTbEquipo);
-			this.Controls.Add(this.mTbNumcamiseta);
-			this.Controls.Add(this.mTbApodo);
-			this.Controls.Add(this.mTbApellido);
-			this.Controls.Add(this.mTbNombre);
-			this.Controls.Add(this.mTbdataPosicion);
-			this.Controls.Add(this.mTbdataEquipo);
-			this.Controls.Add(this.mTbdataNumCamiseta);
-			this.Controls.Add(this.mTbdataApodo);
-			this.Controls.Add(this.mTbdataApellido);
-			this.Controls.Add(this.mTbdataNombre);
+			this.ClientSize = new System.Drawing.Size(822, 528);
+			this.Controls.Add(this.posicionComboBox);
+			this.Controls.Add(this.equipoComboBox);
+			this.Controls.Add(apellidoLabel);
+			this.Controls.Add(this.apellidoTextBox);
+			this.Controls.Add(apodoLabel);
+			this.Controls.Add(this.apodoTextBox);
+			this.Controls.Add(nombreLabel);
+			this.Controls.Add(this.nombreTextBox);
+			this.Controls.Add(numeroCamisetaLabel);
+			this.Controls.Add(this.numeroCamisetaTextBox);
+			this.Controls.Add(urlImagenLabel);
+			this.Controls.Add(this.urlImagenTextBox);
 			this.Controls.Add(this.mBtCancelar);
 			this.Controls.Add(this.mBtAceptar);
 			this.Name = "fmNuevoJugador";
@@ -306,7 +216,10 @@
 			this.Theme = MetroFramework.MetroThemeStyle.Dark;
 			this.TopMost = true;
 			this.Load += new System.EventHandler(this.fmNuevoJugador_Load);
+			((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.posicionBindingSource)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -314,19 +227,14 @@
 
 		private MetroFramework.Controls.MetroButton mBtAceptar;
 		private MetroFramework.Controls.MetroButton mBtCancelar;
-		private MetroFramework.Controls.MetroTextBox mTbdataNombre;
-		private MetroFramework.Controls.MetroTextBox mTbdataApellido;
-		private MetroFramework.Controls.MetroTextBox mTbdataApodo;
-		private MetroFramework.Controls.MetroTextBox mTbdataPosicion;
-		private MetroFramework.Controls.MetroTextBox mTbdataEquipo;
-		private MetroFramework.Controls.MetroTextBox mTbdataNumCamiseta;
-		private MetroFramework.Controls.MetroTextBox mTbPosicion;
-		private MetroFramework.Controls.MetroTextBox mTbEquipo;
-		private MetroFramework.Controls.MetroTextBox mTbNumcamiseta;
-		private MetroFramework.Controls.MetroTextBox mTbApodo;
-		private MetroFramework.Controls.MetroTextBox mTbApellido;
-		private MetroFramework.Controls.MetroTextBox mTbNombre;
-		private MetroFramework.Controls.MetroTextBox mTbImagen;
-		private MetroFramework.Controls.MetroTextBox mTbdataImagen;
+		private System.Windows.Forms.TextBox numeroCamisetaTextBox;
+		private System.Windows.Forms.TextBox apodoTextBox;
+		private System.Windows.Forms.TextBox nombreTextBox;
+		private System.Windows.Forms.TextBox urlImagenTextBox;
+		private System.Windows.Forms.TextBox apellidoTextBox;
+		private System.Windows.Forms.BindingSource equipoBindingSource;
+		private System.Windows.Forms.ComboBox equipoComboBox;
+		private System.Windows.Forms.BindingSource posicionBindingSource;
+		private System.Windows.Forms.ComboBox posicionComboBox;
 	}
 }

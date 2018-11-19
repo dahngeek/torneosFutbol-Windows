@@ -34,7 +34,6 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmListar));
 			this.tarjetaJugador = new System.Windows.Forms.PictureBox();
-			this.lbNombre = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.lbGol = new System.Windows.Forms.Label();
 			this.lbPosicion = new System.Windows.Forms.Label();
@@ -43,12 +42,12 @@
 			this.lbdataPosicion = new System.Windows.Forms.Label();
 			this.lbdataGol = new System.Windows.Forms.Label();
 			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-			this.label4 = new System.Windows.Forms.Label();
+			this.lbCamiseta = new System.Windows.Forms.Label();
 			this.mBtNuevo = new MetroFramework.Controls.MetroButton();
 			this.mBtModificar = new MetroFramework.Controls.MetroButton();
 			this.mBtBorrar = new MetroFramework.Controls.MetroButton();
-			this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
 			this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+			this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
 			this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +55,6 @@
 			this.numeroCamisetaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.posicionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.urlImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.jugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.tarjetaJugador)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,19 +74,6 @@
 			this.tarjetaJugador.TabStop = false;
 			this.tarjetaJugador.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
-			// lbNombre
-			// 
-			this.lbNombre.AutoSize = true;
-			this.lbNombre.BackColor = System.Drawing.Color.Transparent;
-			this.lbNombre.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbNombre.Location = new System.Drawing.Point(176, 454);
-			this.lbNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.lbNombre.Name = "lbNombre";
-			this.lbNombre.Size = new System.Drawing.Size(61, 25);
-			this.lbNombre.TabIndex = 5;
-			this.lbNombre.Text = "Messi";
-			this.lbNombre.Click += new System.EventHandler(this.labelNombre_Click);
-			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.Location = new System.Drawing.Point(102, 335);
@@ -98,6 +83,7 @@
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
 			this.pictureBox1.TabIndex = 7;
 			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
 			// 
 			// lbGol
 			// 
@@ -116,7 +102,7 @@
 			this.lbPosicion.AutoSize = true;
 			this.lbPosicion.BackColor = System.Drawing.Color.Transparent;
 			this.lbPosicion.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbPosicion.Location = new System.Drawing.Point(124, 509);
+			this.lbPosicion.Location = new System.Drawing.Point(111, 509);
 			this.lbPosicion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.lbPosicion.Name = "lbPosicion";
 			this.lbPosicion.Size = new System.Drawing.Size(41, 25);
@@ -171,17 +157,17 @@
 			this.lbdataGol.TabIndex = 12;
 			this.lbdataGol.Text = "GOLS";
 			// 
-			// label4
+			// lbCamiseta
 			// 
-			this.label4.AutoSize = true;
-			this.label4.BackColor = System.Drawing.Color.Transparent;
-			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(224, 352);
-			this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(129, 91);
-			this.label4.TabIndex = 10;
-			this.label4.Text = "10";
+			this.lbCamiseta.AutoSize = true;
+			this.lbCamiseta.BackColor = System.Drawing.Color.Transparent;
+			this.lbCamiseta.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbCamiseta.Location = new System.Drawing.Point(224, 352);
+			this.lbCamiseta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lbCamiseta.Name = "lbCamiseta";
+			this.lbCamiseta.Size = new System.Drawing.Size(129, 91);
+			this.lbCamiseta.TabIndex = 10;
+			this.lbCamiseta.Text = "10";
 			// 
 			// mBtNuevo
 			// 
@@ -191,6 +177,7 @@
 			this.mBtNuevo.Size = new System.Drawing.Size(120, 23);
 			this.mBtNuevo.TabIndex = 16;
 			this.mBtNuevo.Text = "Nuevo";
+			this.mBtNuevo.Theme = MetroFramework.MetroThemeStyle.Dark;
 			this.mBtNuevo.UseSelectable = true;
 			this.mBtNuevo.Click += new System.EventHandler(this.mBtNuevo_Click);
 			// 
@@ -202,7 +189,9 @@
 			this.mBtModificar.Size = new System.Drawing.Size(120, 23);
 			this.mBtModificar.TabIndex = 17;
 			this.mBtModificar.Text = "Modificar";
+			this.mBtModificar.Theme = MetroFramework.MetroThemeStyle.Dark;
 			this.mBtModificar.UseSelectable = true;
+			this.mBtModificar.Click += new System.EventHandler(this.mBtModificar_Click);
 			// 
 			// mBtBorrar
 			// 
@@ -212,21 +201,14 @@
 			this.mBtBorrar.Size = new System.Drawing.Size(120, 23);
 			this.mBtBorrar.TabIndex = 18;
 			this.mBtBorrar.Text = "Borrar";
+			this.mBtBorrar.Theme = MetroFramework.MetroThemeStyle.Dark;
 			this.mBtBorrar.UseSelectable = true;
-			// 
-			// metroComboBox1
-			// 
-			this.metroComboBox1.FormattingEnabled = true;
-			this.metroComboBox1.ItemHeight = 24;
-			this.metroComboBox1.Location = new System.Drawing.Point(680, 143);
-			this.metroComboBox1.Margin = new System.Windows.Forms.Padding(4);
-			this.metroComboBox1.Name = "metroComboBox1";
-			this.metroComboBox1.Size = new System.Drawing.Size(418, 30);
-			this.metroComboBox1.TabIndex = 19;
-			this.metroComboBox1.UseSelectable = true;
+			this.mBtBorrar.Click += new System.EventHandler(this.mBtBorrar_Click);
 			// 
 			// metroGrid1
 			// 
+			this.metroGrid1.AllowUserToAddRows = false;
+			this.metroGrid1.AllowUserToDeleteRows = false;
 			this.metroGrid1.AllowUserToResizeRows = false;
 			this.metroGrid1.AutoGenerateColumns = false;
 			this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -249,8 +231,7 @@
             this.apodoDataGridViewTextBoxColumn,
             this.numeroCamisetaDataGridViewTextBoxColumn,
             this.equipoDataGridViewTextBoxColumn,
-            this.posicionDataGridViewTextBoxColumn,
-            this.urlImagenDataGridViewTextBoxColumn});
+            this.posicionDataGridViewTextBoxColumn});
 			this.metroGrid1.DataSource = this.jugadorBindingSource;
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
@@ -265,6 +246,7 @@
 			this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
 			this.metroGrid1.Location = new System.Drawing.Point(400, 236);
 			this.metroGrid1.Name = "metroGrid1";
+			this.metroGrid1.ReadOnly = true;
 			this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
@@ -277,59 +259,79 @@
 			this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
 			this.metroGrid1.RowTemplate.Height = 24;
 			this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.metroGrid1.Size = new System.Drawing.Size(843, 372);
+			this.metroGrid1.Size = new System.Drawing.Size(742, 372);
 			this.metroGrid1.Style = MetroFramework.MetroColorStyle.Teal;
 			this.metroGrid1.TabIndex = 21;
 			this.metroGrid1.Theme = MetroFramework.MetroThemeStyle.Dark;
 			this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
+			this.metroGrid1.SelectionChanged += new System.EventHandler(this.metroGrid1_SelectionChanged);
+			// 
+			// metroComboBox1
+			// 
+			this.metroComboBox1.ForeColor = System.Drawing.Color.White;
+			this.metroComboBox1.FormattingEnabled = true;
+			this.metroComboBox1.ItemHeight = 24;
+			this.metroComboBox1.Items.AddRange(new object[] {
+            "Ordenar por Equipo",
+            "Ordenar por pizza",
+            "Podenar asdkfj"});
+			this.metroComboBox1.Location = new System.Drawing.Point(658, 171);
+			this.metroComboBox1.Name = "metroComboBox1";
+			this.metroComboBox1.Size = new System.Drawing.Size(484, 30);
+			this.metroComboBox1.Style = MetroFramework.MetroColorStyle.White;
+			this.metroComboBox1.TabIndex = 23;
+			this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
+			this.metroComboBox1.UseSelectable = true;
+			this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged_1);
 			// 
 			// idDataGridViewTextBoxColumn
 			// 
 			this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
 			this.idDataGridViewTextBoxColumn.HeaderText = "Id";
 			this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+			this.idDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// nombreDataGridViewTextBoxColumn
 			// 
 			this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
 			this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
 			this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+			this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// apellidoDataGridViewTextBoxColumn
 			// 
 			this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
 			this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
 			this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+			this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// apodoDataGridViewTextBoxColumn
 			// 
 			this.apodoDataGridViewTextBoxColumn.DataPropertyName = "Apodo";
 			this.apodoDataGridViewTextBoxColumn.HeaderText = "Apodo";
 			this.apodoDataGridViewTextBoxColumn.Name = "apodoDataGridViewTextBoxColumn";
+			this.apodoDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// numeroCamisetaDataGridViewTextBoxColumn
 			// 
 			this.numeroCamisetaDataGridViewTextBoxColumn.DataPropertyName = "NumeroCamiseta";
 			this.numeroCamisetaDataGridViewTextBoxColumn.HeaderText = "NumeroCamiseta";
 			this.numeroCamisetaDataGridViewTextBoxColumn.Name = "numeroCamisetaDataGridViewTextBoxColumn";
+			this.numeroCamisetaDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// equipoDataGridViewTextBoxColumn
 			// 
 			this.equipoDataGridViewTextBoxColumn.DataPropertyName = "Equipo";
 			this.equipoDataGridViewTextBoxColumn.HeaderText = "Equipo";
 			this.equipoDataGridViewTextBoxColumn.Name = "equipoDataGridViewTextBoxColumn";
+			this.equipoDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// posicionDataGridViewTextBoxColumn
 			// 
 			this.posicionDataGridViewTextBoxColumn.DataPropertyName = "Posicion";
 			this.posicionDataGridViewTextBoxColumn.HeaderText = "Posicion";
 			this.posicionDataGridViewTextBoxColumn.Name = "posicionDataGridViewTextBoxColumn";
-			// 
-			// urlImagenDataGridViewTextBoxColumn
-			// 
-			this.urlImagenDataGridViewTextBoxColumn.DataPropertyName = "UrlImagen";
-			this.urlImagenDataGridViewTextBoxColumn.HeaderText = "UrlImagen";
-			this.urlImagenDataGridViewTextBoxColumn.Name = "urlImagenDataGridViewTextBoxColumn";
+			this.posicionDataGridViewTextBoxColumn.ReadOnly = true;
 			// 
 			// jugadorBindingSource
 			// 
@@ -342,8 +344,8 @@
 			this.AutoSize = true;
 			this.BackgroundImage = global::TP4_TORNEOS.Properties.Resources.FONDO;
 			this.ClientSize = new System.Drawing.Size(1260, 720);
-			this.Controls.Add(this.metroGrid1);
 			this.Controls.Add(this.metroComboBox1);
+			this.Controls.Add(this.metroGrid1);
 			this.Controls.Add(this.mBtBorrar);
 			this.Controls.Add(this.mBtModificar);
 			this.Controls.Add(this.mBtNuevo);
@@ -351,11 +353,10 @@
 			this.Controls.Add(this.lbdataPosicion);
 			this.Controls.Add(this.lbdataGol);
 			this.Controls.Add(this.lbTarjeta);
-			this.Controls.Add(this.label4);
+			this.Controls.Add(this.lbCamiseta);
 			this.Controls.Add(this.lbPosicion);
 			this.Controls.Add(this.lbGol);
 			this.Controls.Add(this.pictureBox1);
-			this.Controls.Add(this.lbNombre);
 			this.Controls.Add(this.tarjetaJugador);
 			this.Font = new System.Drawing.Font("Verdana", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -384,7 +385,6 @@
 		#endregion
 
 		private System.Windows.Forms.PictureBox tarjetaJugador;
-        private System.Windows.Forms.Label lbNombre;
         private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label lbGol;
 		private System.Windows.Forms.Label lbPosicion;
@@ -393,11 +393,10 @@
 		private System.Windows.Forms.Label lbdataPosicion;
 		private System.Windows.Forms.Label lbdataGol;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbCamiseta;
 		private MetroFramework.Controls.MetroButton mBtNuevo;
 		private MetroFramework.Controls.MetroButton mBtModificar;
 		private MetroFramework.Controls.MetroButton mBtBorrar;
-		private MetroFramework.Controls.MetroComboBox metroComboBox1;
 		private System.Windows.Forms.BindingSource jugadorBindingSource;
 		private MetroFramework.Controls.MetroGrid metroGrid1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
@@ -407,6 +406,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn numeroCamisetaDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn posicionDataGridViewTextBoxColumn;
-		private System.Windows.Forms.DataGridViewTextBoxColumn urlImagenDataGridViewTextBoxColumn;
+		private MetroFramework.Controls.MetroComboBox metroComboBox1;
 	}
 }

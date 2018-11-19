@@ -40,6 +40,7 @@
 			this.mBtCancelar.Size = new System.Drawing.Size(114, 32);
 			this.mBtCancelar.TabIndex = 19;
 			this.mBtCancelar.Text = "Cancelar";
+			this.mBtCancelar.Theme = MetroFramework.MetroThemeStyle.Dark;
 			this.mBtCancelar.UseSelectable = true;
 			// 
 			// mBtAceptar
@@ -49,6 +50,7 @@
 			this.mBtAceptar.Size = new System.Drawing.Size(114, 32);
 			this.mBtAceptar.TabIndex = 18;
 			this.mBtAceptar.Text = "Aceptar";
+			this.mBtAceptar.Theme = MetroFramework.MetroThemeStyle.Dark;
 			this.mBtAceptar.UseSelectable = true;
 			// 
 			// mTbConfirmar
@@ -66,6 +68,7 @@
 			this.mTbConfirmar.Size = new System.Drawing.Size(376, 38);
 			this.mTbConfirmar.TabIndex = 20;
 			this.mTbConfirmar.Text = "¿Está seguro que desea borrar el jugador?";
+			this.mTbConfirmar.Theme = MetroFramework.MetroThemeStyle.Dark;
 			this.mTbConfirmar.UseSelectable = true;
 			// 
 			// fmEliminarJugador

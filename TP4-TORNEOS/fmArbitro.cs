@@ -34,10 +34,11 @@ namespace TP4_TORNEOS
                 Arbitro arbitroselection = (Arbitro)arbitroBindingSource.Current;
                 nombreTextBox.Text = arbitroselection.Nombre;
                 apellidoTextBox.Text = arbitroselection.Apellido;
-            }
-            catch {
+				}
+            catch
+				{
 
-            }
+				}
             saveBtn.Visible = false;
             nombreTextBox.ReadOnly = true;
             apellidoTextBox.ReadOnly = true;
@@ -85,5 +86,10 @@ namespace TP4_TORNEOS
             arbitroBindingSource.DataSource = null;
             arbitroBindingSource.DataSource = Controladores.pArbitro.GetAll();
         }
-    }
+
+		private void nombreTextBox_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
