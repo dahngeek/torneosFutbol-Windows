@@ -41,5 +41,10 @@ namespace TP4_TORNEOS
 		{
 
 		}
+
+		private void mBtAceptar_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

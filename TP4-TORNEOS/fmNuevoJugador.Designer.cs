@@ -54,6 +54,7 @@
 			this.mBtAceptar.TabIndex = 0;
 			this.mBtAceptar.Text = "Aceptar";
 			this.mBtAceptar.UseSelectable = true;
+			this.mBtAceptar.Click += new System.EventHandler(this.mBtAceptar_Click);
 			// 
 			// mBtCancelar
 			// 
@@ -303,6 +304,7 @@
 			this.Style = MetroFramework.MetroColorStyle.Teal;
 			this.Text = "Crear Jugador";
 			this.Theme = MetroFramework.MetroThemeStyle.Dark;
+			this.TopMost = true;
 			this.Load += new System.EventHandler(this.fmNuevoJugador_Load);
 			this.ResumeLayout(false);
 

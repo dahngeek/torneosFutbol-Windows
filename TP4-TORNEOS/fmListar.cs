@@ -164,5 +164,10 @@ namespace TP4_TORNEOS
 		{
 
 		}
+
+		private void mBtNuevo_Click(object sender, EventArgs e)
+		{
+			new fmNuevoJugador().ShowDialog();
+		}
 	}
 }

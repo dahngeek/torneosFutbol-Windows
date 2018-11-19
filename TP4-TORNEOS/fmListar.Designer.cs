@@ -192,6 +192,7 @@
 			this.mBtNuevo.TabIndex = 16;
 			this.mBtNuevo.Text = "Nuevo";
 			this.mBtNuevo.UseSelectable = true;
+			this.mBtNuevo.Click += new System.EventHandler(this.mBtNuevo_Click);
 			// 
 			// mBtModificar
 			// 
