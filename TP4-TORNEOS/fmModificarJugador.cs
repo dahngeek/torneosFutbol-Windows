@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace TP4_TORNEOS
 {
-	public partial class fmModificar : Form
+	public partial class fmModificarJugador : MetroFramework.Forms.MetroForm
 	{
-		public fmModificar()
+		public fmModificarJugador()
 		{
 			InitializeComponent();
-		}
-
-		private void fmModificar_KeyPress(object sender, KeyPressEventArgs e)
-		{
-			if (e.KeyChar == Convert.ToChar(Keys.Escape))
-			{
-				Close();
-
-			}
 		}
 	}
 }

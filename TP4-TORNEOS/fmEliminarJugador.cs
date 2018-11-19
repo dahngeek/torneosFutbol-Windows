@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace TP4_TORNEOS
 {
-	public partial class fmEliminar : Form
+	public partial class fmEliminarJugador : MetroFramework.Forms.MetroForm
 	{
-		public fmEliminar()
+		public fmEliminarJugador()
 		{
 			InitializeComponent();
-		}
-
-		private void fmEliminar_KeyPress(object sender, KeyPressEventArgs e)
-		{
-			if (e.KeyChar == Convert.ToChar(Keys.Escape))
-			{
-				Close();
-
-			}
 		}
 	}
 }

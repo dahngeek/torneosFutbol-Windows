@@ -75,7 +75,7 @@ namespace TP4_TORNEOS
 		{
 
 		//	button1.FlatAppearance.BorderColor = Color.White;
-			new fmCrearJug().ShowDialog();
+		
 		}
 
 		private void mtpJugadores_Click(object sender, EventArgs e)
@@ -100,13 +100,12 @@ namespace TP4_TORNEOS
 		private void button2_Click(object sender, EventArgs e)
 		{
             audioBoton.Play();
-            new fmModificar().ShowDialog();
+            
 		}
 
 		private void button3_Click(object sender, EventArgs e)
 		{
 			audioBoton.Play();
-			new fmEliminar().ShowDialog();
 		}
 
 		private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -139,7 +138,6 @@ namespace TP4_TORNEOS
 			this.label3.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
 			this.label4.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
 			//abre la ventana
-			new fmCrearJug().ShowDialog();
 		}
 
 		private void label2_Click(object sender, EventArgs e)
@@ -153,7 +151,7 @@ namespace TP4_TORNEOS
 			this.label3.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
 			this.label4.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
 			//abre la ventana
-			new fmModificar().ShowDialog();
+			
 		}
 
 		private void label3_Click(object sender, EventArgs e)
@@ -185,7 +183,7 @@ namespace TP4_TORNEOS
 			this.label3.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
 
 			//abre la ventana
-			new fmEliminar().ShowDialog();
+		
 		}
 
 		private void label1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
