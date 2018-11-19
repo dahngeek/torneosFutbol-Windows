@@ -186,7 +186,7 @@
 			// mBtNuevo
 			// 
 			this.mBtNuevo.Location = new System.Drawing.Point(32, 143);
-			this.mBtNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.mBtNuevo.Margin = new System.Windows.Forms.Padding(4);
 			this.mBtNuevo.Name = "mBtNuevo";
 			this.mBtNuevo.Size = new System.Drawing.Size(120, 23);
 			this.mBtNuevo.TabIndex = 16;
@@ -196,7 +196,7 @@
 			// mBtModificar
 			// 
 			this.mBtModificar.Location = new System.Drawing.Point(156, 143);
-			this.mBtModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.mBtModificar.Margin = new System.Windows.Forms.Padding(4);
 			this.mBtModificar.Name = "mBtModificar";
 			this.mBtModificar.Size = new System.Drawing.Size(120, 23);
 			this.mBtModificar.TabIndex = 17;
@@ -206,7 +206,7 @@
 			// mBtBorrar
 			// 
 			this.mBtBorrar.Location = new System.Drawing.Point(284, 143);
-			this.mBtBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.mBtBorrar.Margin = new System.Windows.Forms.Padding(4);
 			this.mBtBorrar.Name = "mBtBorrar";
 			this.mBtBorrar.Size = new System.Drawing.Size(120, 23);
 			this.mBtBorrar.TabIndex = 18;
@@ -218,7 +218,7 @@
 			this.metroComboBox1.FormattingEnabled = true;
 			this.metroComboBox1.ItemHeight = 24;
 			this.metroComboBox1.Location = new System.Drawing.Point(680, 143);
-			this.metroComboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.metroComboBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.metroComboBox1.Name = "metroComboBox1";
 			this.metroComboBox1.Size = new System.Drawing.Size(418, 30);
 			this.metroComboBox1.TabIndex = 19;
@@ -280,6 +280,7 @@
 			this.metroGrid1.Style = MetroFramework.MetroColorStyle.Teal;
 			this.metroGrid1.TabIndex = 21;
 			this.metroGrid1.Theme = MetroFramework.MetroThemeStyle.Dark;
+			this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
 			// 
 			// idDataGridViewTextBoxColumn
 			// 

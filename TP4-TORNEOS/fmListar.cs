@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using TP4_TORNEOS.Controladores;
+using TP4_TORNEOS.Entidades;
 using System.Media;
 
 namespace TP4_TORNEOS
@@ -17,7 +19,7 @@ namespace TP4_TORNEOS
 		public fmListar()
 		{
 			InitializeComponent();
-
+			jugadorBindingSource.DataSource = pJugador.GetAll();
 			SoundPlayer audioBoton = new SoundPlayer("sonidoBt.wav");
 
             // Transparencia para las imagenes.
@@ -157,5 +159,10 @@ namespace TP4_TORNEOS
         {
 
         }
-    }
+
+		private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+	}
 }
