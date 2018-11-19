@@ -82,66 +82,66 @@
     <Compile Include="Entidades\Posicion.cs" />
     <Compile Include="Entidades\TarjetaJugador.cs" />
     <Compile Include="Entidades\TipoTarjeta.cs" />
-    <Compile Include="fmArbitro.cs">
+    <Compile Include="Formularios\fmArbitro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmArbitro.Designer.cs">
+    <Compile Include="Formularios\fmArbitro.Designer.cs">
       <DependentUpon>fmArbitro.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmEliminarJugador.cs">
+    <Compile Include="Formularios\fmEliminarJugador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmEliminarJugador.Designer.cs">
+    <Compile Include="Formularios\fmEliminarJugador.Designer.cs">
       <DependentUpon>fmEliminarJugador.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmListar.cs">
+    <Compile Include="Formularios\fmListar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmListar.Designer.cs">
+    <Compile Include="Formularios\fmListar.Designer.cs">
       <DependentUpon>fmListar.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmModificarJugador.cs">
+    <Compile Include="Formularios\fmModificarJugador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmModificarJugador.Designer.cs">
+    <Compile Include="Formularios\fmModificarJugador.Designer.cs">
       <DependentUpon>fmModificarJugador.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmNuevoJugador.cs">
+    <Compile Include="Formularios\fmNuevoJugador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmNuevoJugador.Designer.cs">
+    <Compile Include="Formularios\fmNuevoJugador.Designer.cs">
       <DependentUpon>fmNuevoJugador.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallaPrincipal.cs">
+    <Compile Include="Formularios\PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallaPrincipal.Designer.cs">
+    <Compile Include="Formularios\PantallaPrincipal.Designer.cs">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TablaPosicionesEquipos.cs">
+    <Compile Include="Formularios\TablaPosicionesEquipos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TablaPosicionesEquipos.Designer.cs">
+    <Compile Include="Formularios\TablaPosicionesEquipos.Designer.cs">
       <DependentUpon>TablaPosicionesEquipos.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="fmArbitro.resx">
+    <EmbeddedResource Include="Formularios\fmArbitro.resx">
       <DependentUpon>fmArbitro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmEliminarJugador.resx">
+    <EmbeddedResource Include="Formularios\fmEliminarJugador.resx">
       <DependentUpon>fmEliminarJugador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmListar.resx">
+    <EmbeddedResource Include="Formularios\fmListar.resx">
       <DependentUpon>fmListar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmModificarJugador.resx">
+    <EmbeddedResource Include="Formularios\fmModificarJugador.resx">
       <DependentUpon>fmModificarJugador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmNuevoJugador.resx">
+    <EmbeddedResource Include="Formularios\fmNuevoJugador.resx">
       <DependentUpon>fmNuevoJugador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallaPrincipal.resx">
+    <EmbeddedResource Include="Formularios\PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -149,7 +149,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TablaPosicionesEquipos.resx">
+    <EmbeddedResource Include="Formularios\TablaPosicionesEquipos.resx">
       <DependentUpon>TablaPosicionesEquipos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\TP4_TORNEOS.Entidades.Arbitro.datasource" />

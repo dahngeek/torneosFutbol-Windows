@@ -16,6 +16,7 @@ namespace TP4_TORNEOS
 {
 	public partial class fmListar : MetroFramework.Forms.MetroForm
 	{
+		
 		public fmListar()
 		{
 			InitializeComponent();
@@ -25,12 +26,12 @@ namespace TP4_TORNEOS
             // Transparencia para las imagenes.
             tarjetaJugador.BackColor = Color.Transparent;
 
-            // Transparencia para label sobre imagen. (vuelve la imagen el padre del label)
-            var pos = this.PointToScreen(lbNombre.Location);
-            pos = tarjetaJugador.PointToClient(pos);
-            lbNombre.Parent = tarjetaJugador;
-            lbNombre.Location = pos;
-            lbNombre.BackColor = Color.Transparent;
+			// Transparencia para label sobre imagen. (vuelve la imagen el padre del label)
+
+
+
+
+
 
 			var pos2 = this.PointToScreen(lbGol.Location);
 			pos2 = tarjetaJugador.PointToClient(pos2);
@@ -44,11 +45,11 @@ namespace TP4_TORNEOS
 			lbPosicion.Location = pos3;
 			lbPosicion.BackColor = Color.Transparent;
 
-			var pos4 = this.PointToScreen(label4.Location);
+			var pos4 = this.PointToScreen(lbCamiseta.Location);
 			pos4 = tarjetaJugador.PointToClient(pos4);
-			label4.Parent = tarjetaJugador;
-			label4.Location = pos4;
-			label4.BackColor = Color.Transparent;
+			lbCamiseta.Parent = tarjetaJugador;
+			lbCamiseta.Location = pos4;
+			lbCamiseta.BackColor = Color.Transparent;
 
 			var pos5 = this.PointToScreen(lbTarjeta.Location);
 			pos5 = tarjetaJugador.PointToClient(pos5);
@@ -77,7 +78,7 @@ namespace TP4_TORNEOS
 
 			//Cargar imagen de jugador
 			pictureBox1.Load("https://cdn.sofifa.org/players/10/19/158023.png");
-            pos = this.PointToScreen(pictureBox1.Location);
+             var pos = this.PointToScreen(pictureBox1.Location);
             pos = tarjetaJugador.PointToClient(pos);
             pictureBox1.Parent = tarjetaJugador;
             pictureBox1.Location = pos;
@@ -165,9 +166,88 @@ namespace TP4_TORNEOS
 
 		}
 
+		
+
 		private void mBtNuevo_Click(object sender, EventArgs e)
 		{
 			new fmNuevoJugador().ShowDialog();
+			jugadorBindingSource.DataSource = null;
+			jugadorBindingSource.DataSource = pJugador.GetAll();
+
+			
+		}
+
+		private void mBtBorrar_Click(object sender, EventArgs e)
+		{
+			Jugador jugadoreliminar = (Jugador)jugadorBindingSource.Current;
+			pJugador.Delete(jugadoreliminar);
+			actualizar();
+		}
+
+		private void actualizar()
+		{
+			jugadorBindingSource.DataSource = null;
+			jugadorBindingSource.DataSource = pJugador.GetAll();
+		}
+
+		private void mBtModificar_Click(object sender, EventArgs e)
+		{
+			int id = ((Jugador)jugadorBindingSource.Current).Id;
+			new fmModificarJugador(id).ShowDialog();
+
+			//show dialogo me muestra el formulario
+
+			jugadorBindingSource.DataSource = null; //la lista la pongo nula para volver a cargar todo
+			jugadorBindingSource.DataSource = pJugador.GetAll();
+
+		}
+
+		private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			
+			jugadorBindingSource.DataSource = OrdenaJugador();
+		}
+
+		private List<Jugador> OrdenaJugador()
+		{
+			List<Jugador> jugadores = new List<Jugador>();
+			jugadores = pJugador.GetAll();
+			for (int i = 0; i < jugadores.Count - 1; i++)
+			{
+				if (jugadores[i].Equipo.Id < jugadores[i + 1].Equipo.Id)
+				{
+					Jugador j = new Jugador();
+					j = jugadores[i];
+					jugadores[i] = jugadores[i + 1];
+					jugadores[i + 1] = j;
+				}
+			}
+
+			return jugadores;
+		}
+
+		private void metroComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+		{
+			int a = metroComboBox1.SelectedIndex;
+		}
+
+		private void metroGrid1_SelectionChanged(object sender, EventArgs e)
+		{
+			try
+			{
+				Jugador SelecionarJugador = (Jugador)jugadorBindingSource.Current;
+				lbPosicion.Text = SelecionarJugador.Posicion.Nombre;
+				lbCamiseta.Text = SelecionarJugador.NumeroCamiseta.ToString();
+				pictureBox1.Load(SelecionarJugador.UrlImagen);
+			}
+			catch
+			{
+			}
+		}
+
+		private void pictureBox1_Click_1(object sender, EventArgs e)
+		{
+		
 		}
 	}
 }
