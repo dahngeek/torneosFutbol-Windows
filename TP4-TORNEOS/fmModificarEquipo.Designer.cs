@@ -38,7 +38,7 @@
             this.equipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btVenderJugador = new MetroFramework.Controls.MetroButton();
             this.btComprarJugador = new MetroFramework.Controls.MetroButton();
-            this.btEliminar = new MetroFramework.Controls.MetroButton();
+            this.btModificar = new MetroFramework.Controls.MetroButton();
             this.lbNombreEquipo = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbPuntos = new MetroFramework.Controls.MetroLabel();
@@ -57,10 +57,19 @@
             this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urlImagenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txNombreEquipo = new MetroFramework.Controls.MetroTextBox();
+            this.cbConfiguracion = new MetroFramework.Controls.MetroComboBox();
+            this.configuracionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.posicionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btAnadir = new MetroFramework.Controls.MetroButton();
+            this.btCancelarAnadir = new MetroFramework.Controls.MetroButton();
+            this.btModificarEquipo = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jugadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.configuracionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.posicionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btCrear
@@ -72,6 +81,7 @@
             this.btCrear.Text = "Crear";
             this.btCrear.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btCrear.UseSelectable = true;
+            this.btCrear.Click += new System.EventHandler(this.btCrear_Click);
             // 
             // cbEquipos
             // 
@@ -81,11 +91,14 @@
             this.cbEquipos.ItemHeight = 23;
             this.cbEquipos.Location = new System.Drawing.Point(502, 96);
             this.cbEquipos.Name = "cbEquipos";
+            this.cbEquipos.PromptText = "(Seleccione Equipo)";
             this.cbEquipos.Size = new System.Drawing.Size(145, 29);
             this.cbEquipos.TabIndex = 2;
             this.cbEquipos.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.cbEquipos.UseSelectable = true;
             this.cbEquipos.SelectedIndexChanged += new System.EventHandler(this.cbEquipos_SelectedIndexChanged);
+            this.cbEquipos.DisplayMemberChanged += new System.EventHandler(this.cbEquipos_DisplayMemberChanged);
+            this.cbEquipos.SelectedValueChanged += new System.EventHandler(this.cbEquipos_SelectedValueChanged);
             this.cbEquipos.Click += new System.EventHandler(this.cbEquipos_Click);
             // 
             // equipoBindingSource
@@ -112,15 +125,16 @@
             this.btComprarJugador.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btComprarJugador.UseSelectable = true;
             // 
-            // btEliminar
+            // btModificar
             // 
-            this.btEliminar.Location = new System.Drawing.Point(29, 408);
-            this.btEliminar.Name = "btEliminar";
-            this.btEliminar.Size = new System.Drawing.Size(134, 23);
-            this.btEliminar.TabIndex = 5;
-            this.btEliminar.Text = "Eliminar";
-            this.btEliminar.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btEliminar.UseSelectable = true;
+            this.btModificar.Location = new System.Drawing.Point(196, 187);
+            this.btModificar.Name = "btModificar";
+            this.btModificar.Size = new System.Drawing.Size(134, 23);
+            this.btModificar.TabIndex = 5;
+            this.btModificar.Text = "Modificar";
+            this.btModificar.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btModificar.UseSelectable = true;
+            this.btModificar.Click += new System.EventHandler(this.btModificar_Click);
             // 
             // lbNombreEquipo
             // 
@@ -136,10 +150,13 @@
             // pictureBox1
             // 
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
+            this.pictureBox1.Image = global::TP4_TORNEOS.Properties.Resources.Equipos;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(29, 110);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(2000, 2000);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(134, 107);
+            this.pictureBox1.Size = new System.Drawing.Size(150, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -327,11 +344,95 @@
             this.urlImagenDataGridViewTextBoxColumn.ReadOnly = true;
             this.urlImagenDataGridViewTextBoxColumn.Visible = false;
             // 
+            // txNombreEquipo
+            // 
+            this.txNombreEquipo.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txNombreEquipo.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txNombreEquipo.Lines = new string[] {
+        "Nombre:"};
+            this.txNombreEquipo.Location = new System.Drawing.Point(29, 67);
+            this.txNombreEquipo.MaxLength = 32767;
+            this.txNombreEquipo.Name = "txNombreEquipo";
+            this.txNombreEquipo.PasswordChar = '\0';
+            this.txNombreEquipo.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txNombreEquipo.SelectedText = "";
+            this.txNombreEquipo.Size = new System.Drawing.Size(150, 29);
+            this.txNombreEquipo.TabIndex = 15;
+            this.txNombreEquipo.Text = "Nombre:";
+            this.txNombreEquipo.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.txNombreEquipo.UseSelectable = true;
+            this.txNombreEquipo.Visible = false;
+            this.txNombreEquipo.Click += new System.EventHandler(this.txNombreEquipo_Click);
+            // 
+            // cbConfiguracion
+            // 
+            this.cbConfiguracion.DataSource = this.configuracionBindingSource;
+            this.cbConfiguracion.DisplayMember = "Nombre";
+            this.cbConfiguracion.FormattingEnabled = true;
+            this.cbConfiguracion.ItemHeight = 23;
+            this.cbConfiguracion.Location = new System.Drawing.Point(196, 68);
+            this.cbConfiguracion.Name = "cbConfiguracion";
+            this.cbConfiguracion.PromptText = "Configuracion";
+            this.cbConfiguracion.Size = new System.Drawing.Size(121, 29);
+            this.cbConfiguracion.TabIndex = 16;
+            this.cbConfiguracion.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.cbConfiguracion.UseSelectable = true;
+            this.cbConfiguracion.Visible = false;
+            // 
+            // configuracionBindingSource
+            // 
+            this.configuracionBindingSource.DataSource = typeof(TP4_TORNEOS.Entidades.Configuracion);
+            // 
+            // posicionBindingSource
+            // 
+            this.posicionBindingSource.DataSource = typeof(TP4_TORNEOS.Entidades.Posicion);
+            // 
+            // btAnadir
+            // 
+            this.btAnadir.Location = new System.Drawing.Point(196, 110);
+            this.btAnadir.Name = "btAnadir";
+            this.btAnadir.Size = new System.Drawing.Size(121, 23);
+            this.btAnadir.TabIndex = 17;
+            this.btAnadir.Text = "Añadir Equipo";
+            this.btAnadir.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btAnadir.UseSelectable = true;
+            this.btAnadir.Visible = false;
+            this.btAnadir.Click += new System.EventHandler(this.btAnadir_Click);
+            // 
+            // btCancelarAnadir
+            // 
+            this.btCancelarAnadir.Location = new System.Drawing.Point(196, 146);
+            this.btCancelarAnadir.Name = "btCancelarAnadir";
+            this.btCancelarAnadir.Size = new System.Drawing.Size(121, 23);
+            this.btCancelarAnadir.TabIndex = 18;
+            this.btCancelarAnadir.Text = "Cancelar";
+            this.btCancelarAnadir.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btCancelarAnadir.UseSelectable = true;
+            this.btCancelarAnadir.Visible = false;
+            this.btCancelarAnadir.Click += new System.EventHandler(this.btCancelarAnadir_Click);
+            // 
+            // btModificarEquipo
+            // 
+            this.btModificarEquipo.Location = new System.Drawing.Point(196, 109);
+            this.btModificarEquipo.Name = "btModificarEquipo";
+            this.btModificarEquipo.Size = new System.Drawing.Size(121, 23);
+            this.btModificarEquipo.TabIndex = 19;
+            this.btModificarEquipo.Text = "Modificar Equipo";
+            this.btModificarEquipo.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btModificarEquipo.UseSelectable = true;
+            this.btModificarEquipo.Visible = false;
+            this.btModificarEquipo.Click += new System.EventHandler(this.btModificarEquipo_Click);
+            // 
             // fmModificarEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btModificarEquipo);
+            this.Controls.Add(this.btCancelarAnadir);
+            this.Controls.Add(this.btAnadir);
+            this.Controls.Add(this.cbConfiguracion);
+            this.Controls.Add(this.txNombreEquipo);
             this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.lbGCEq);
             this.Controls.Add(this.lbGFEq);
@@ -341,7 +442,7 @@
             this.Controls.Add(this.lbPuntos);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbNombreEquipo);
-            this.Controls.Add(this.btEliminar);
+            this.Controls.Add(this.btModificar);
             this.Controls.Add(this.btComprarJugador);
             this.Controls.Add(this.btVenderJugador);
             this.Controls.Add(this.cbEquipos);
@@ -354,6 +455,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jugadorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.configuracionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.posicionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,7 +467,7 @@
         private MetroFramework.Controls.MetroComboBox cbEquipos;
         private MetroFramework.Controls.MetroButton btVenderJugador;
         private MetroFramework.Controls.MetroButton btComprarJugador;
-        private MetroFramework.Controls.MetroButton btEliminar;
+        private MetroFramework.Controls.MetroButton btModificar;
         private MetroFramework.Controls.MetroLabel lbNombreEquipo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroLabel lbPuntos;
@@ -385,5 +488,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn urlImagenDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroTextBox txNombreEquipo;
+        private MetroFramework.Controls.MetroComboBox cbConfiguracion;
+        private System.Windows.Forms.BindingSource posicionBindingSource;
+        private MetroFramework.Controls.MetroButton btAnadir;
+        private System.Windows.Forms.BindingSource configuracionBindingSource;
+        private MetroFramework.Controls.MetroButton btCancelarAnadir;
+        private MetroFramework.Controls.MetroButton btModificarEquipo;
     }
 }
