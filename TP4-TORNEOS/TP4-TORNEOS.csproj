@@ -88,17 +88,11 @@
     <Compile Include="fmArbitro.Designer.cs">
       <DependentUpon>fmArbitro.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmCrearJug.cs">
+    <Compile Include="fmEliminarJugador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmCrearJug.Designer.cs">
-      <DependentUpon>fmCrearJug.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fmEliminar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fmEliminar.Designer.cs">
-      <DependentUpon>fmEliminar.cs</DependentUpon>
+    <Compile Include="fmEliminarJugador.Designer.cs">
+      <DependentUpon>fmEliminarJugador.cs</DependentUpon>
     </Compile>
     <Compile Include="fmListar.cs">
       <SubType>Form</SubType>
@@ -106,11 +100,17 @@
     <Compile Include="fmListar.Designer.cs">
       <DependentUpon>fmListar.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmModificar.cs">
+    <Compile Include="fmModificarJugador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmModificar.Designer.cs">
-      <DependentUpon>fmModificar.cs</DependentUpon>
+    <Compile Include="fmModificarJugador.Designer.cs">
+      <DependentUpon>fmModificarJugador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmNuevoJugador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmNuevoJugador.Designer.cs">
+      <DependentUpon>fmNuevoJugador.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallaPrincipal.cs">
       <SubType>Form</SubType>
@@ -120,23 +120,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TablaPosicionesEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TablaPosicionesEquipos.Designer.cs">
+      <DependentUpon>TablaPosicionesEquipos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="fmArbitro.resx">
       <DependentUpon>fmArbitro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmCrearJug.es-AR.resx">
-      <DependentUpon>fmCrearJug.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fmCrearJug.resx">
-      <DependentUpon>fmCrearJug.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fmEliminar.resx">
-      <DependentUpon>fmEliminar.cs</DependentUpon>
+    <EmbeddedResource Include="fmEliminarJugador.resx">
+      <DependentUpon>fmEliminarJugador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmListar.resx">
       <DependentUpon>fmListar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmModificar.resx">
-      <DependentUpon>fmModificar.cs</DependentUpon>
+    <EmbeddedResource Include="fmModificarJugador.resx">
+      <DependentUpon>fmModificarJugador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmNuevoJugador.resx">
+      <DependentUpon>fmNuevoJugador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
@@ -145,6 +148,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TablaPosicionesEquipos.resx">
+      <DependentUpon>TablaPosicionesEquipos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\TP4_TORNEOS.Entidades.Arbitro.datasource" />
     <None Include="Properties\DataSources\TP4_TORNEOS.Entidades.CambiosEncuentro.datasource" />

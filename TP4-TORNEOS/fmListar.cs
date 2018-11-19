@@ -8,39 +8,41 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using TP4_TORNEOS.Controladores;
+using TP4_TORNEOS.Entidades;
 using System.Media;
 
 namespace TP4_TORNEOS
 {
-	public partial class fmListar : Form
+	public partial class fmListar : MetroFramework.Forms.MetroForm
 	{
 		public fmListar()
 		{
 			InitializeComponent();
-
+			jugadorBindingSource.DataSource = pJugador.GetAll();
 			SoundPlayer audioBoton = new SoundPlayer("sonidoBt.wav");
 
             // Transparencia para las imagenes.
             tarjetaJugador.BackColor = Color.Transparent;
 
             // Transparencia para label sobre imagen. (vuelve la imagen el padre del label)
-            var pos = this.PointToScreen(labelNombre.Location);
+            var pos = this.PointToScreen(lbNombre.Location);
             pos = tarjetaJugador.PointToClient(pos);
-            labelNombre.Parent = tarjetaJugador;
-            labelNombre.Location = pos;
-            labelNombre.BackColor = Color.Transparent;
+            lbNombre.Parent = tarjetaJugador;
+            lbNombre.Location = pos;
+            lbNombre.BackColor = Color.Transparent;
 
-			var pos2 = this.PointToScreen(label2.Location);
+			var pos2 = this.PointToScreen(lbGol.Location);
 			pos2 = tarjetaJugador.PointToClient(pos2);
-			label2.Parent = tarjetaJugador;
-			label2.Location = pos2;
-			label2.BackColor = Color.Transparent;
+			lbGol.Parent = tarjetaJugador;
+			lbGol.Location = pos2;
+			lbGol.BackColor = Color.Transparent;
 
-			var pos3 = this.PointToScreen(label3.Location);
+			var pos3 = this.PointToScreen(lbPosicion.Location);
 			pos3 = tarjetaJugador.PointToClient(pos3);
-			label3.Parent = tarjetaJugador;
-			label3.Location = pos3;
-			label3.BackColor = Color.Transparent;
+			lbPosicion.Parent = tarjetaJugador;
+			lbPosicion.Location = pos3;
+			lbPosicion.BackColor = Color.Transparent;
 
 			var pos4 = this.PointToScreen(label4.Location);
 			pos4 = tarjetaJugador.PointToClient(pos4);
@@ -48,30 +50,30 @@ namespace TP4_TORNEOS
 			label4.Location = pos4;
 			label4.BackColor = Color.Transparent;
 
-			var pos5 = this.PointToScreen(label5.Location);
+			var pos5 = this.PointToScreen(lbTarjeta.Location);
 			pos5 = tarjetaJugador.PointToClient(pos5);
-			label5.Parent = tarjetaJugador;
-			label5.Location = pos5;
-			label5.BackColor = Color.Transparent;
+			lbTarjeta.Parent = tarjetaJugador;
+			lbTarjeta.Location = pos5;
+			lbTarjeta.BackColor = Color.Transparent;
 
-			var pos6 = this.PointToScreen(label6.Location);
+			var pos6 = this.PointToScreen(lbdataTarjeta.Location);
 			pos6 = tarjetaJugador.PointToClient(pos6);
-			label6.Parent = tarjetaJugador;
-			label6.Location = pos6;
-			label6.BackColor = Color.Transparent;
+			lbdataTarjeta.Parent = tarjetaJugador;
+			lbdataTarjeta.Location = pos6;
+			lbdataTarjeta.BackColor = Color.Transparent;
 
 
-			var pos8 = this.PointToScreen(label8.Location);
+			var pos8 = this.PointToScreen(lbdataPosicion.Location);
 			pos8 = tarjetaJugador.PointToClient(pos8);
-			label8.Parent = tarjetaJugador;
-			label8.Location = pos8;
-			label8.BackColor = Color.Transparent;
+			lbdataPosicion.Parent = tarjetaJugador;
+			lbdataPosicion.Location = pos8;
+			lbdataPosicion.BackColor = Color.Transparent;
 
-			var pos9 = this.PointToScreen(label9.Location);
+			var pos9 = this.PointToScreen(lbdataGol.Location);
 			pos9 = tarjetaJugador.PointToClient(pos9);
-			label9.Parent = tarjetaJugador;
-			label9.Location = pos9;
-			label9.BackColor = Color.Transparent;
+			lbdataGol.Parent = tarjetaJugador;
+			lbdataGol.Location = pos9;
+			lbdataGol.BackColor = Color.Transparent;
 
 			//Cargar imagen de jugador
 			pictureBox1.Load("https://cdn.sofifa.org/players/10/19/158023.png");
@@ -119,7 +121,7 @@ namespace TP4_TORNEOS
 
 		private void label1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
 		{
-			label1.Text = "hola";
+			
 		}
 
 		private void axWindowsMediaPlayer1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -140,15 +142,10 @@ namespace TP4_TORNEOS
 
         private void fmListar_FormClosed(object sender, FormClosedEventArgs e)
         {
-            axWindowsMediaPlayer1.Ctlcontrols.stop();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
         {
 
         }
@@ -162,5 +159,10 @@ namespace TP4_TORNEOS
         {
 
         }
-    }
+
+		private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+	}
 }
