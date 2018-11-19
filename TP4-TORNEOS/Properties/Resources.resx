@@ -124,6 +124,9 @@
   <data name="banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\banner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bg-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bgbutton-normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bgbutton-normal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,14 +148,11 @@
   <data name="p_common_gold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\p_common_gold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FONDO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FONDO.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="jonathan_petersson_210341" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jonathan-petersson-210341.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cards_bg_e_1_3_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cards_bg_e_1_3_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="p_promoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\p_promoa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cards_bg_e_1_1_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cards_bg_e_1_1_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,8 +160,8 @@
   <data name="esrb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\esrb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="jonathan_petersson_210341" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jonathan-petersson-210341.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FONDO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FONDO.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="p_totw_gold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\p_totw_gold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,10 +169,13 @@
   <data name="fifalogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fifalogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="p_promoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\p_promoa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cardsbgpurple" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cardsbgpurple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bg-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="firefox_2018-11-18_20-24-25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\firefox_2018-11-18_20-24-25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -183,6 +183,16 @@ namespace TP4_TORNEOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap firefox_2018_11_18_20_24_25 {
+            get {
+                object obj = ResourceManager.GetObject("firefox_2018-11-18_20-24-25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FONDO {
             get {
                 object obj = ResourceManager.GetObject("FONDO", resourceCulture);

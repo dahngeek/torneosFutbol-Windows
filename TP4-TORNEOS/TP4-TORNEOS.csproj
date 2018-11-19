@@ -260,5 +260,8 @@
   <ItemGroup>
     <None Include="Resources\bg-card.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firefox_2018-11-18_20-24-25.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
