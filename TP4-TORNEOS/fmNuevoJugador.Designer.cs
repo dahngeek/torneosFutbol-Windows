@@ -176,7 +176,7 @@
 			this.equipoComboBox.Name = "equipoComboBox";
 			this.equipoComboBox.Size = new System.Drawing.Size(300, 24);
 			this.equipoComboBox.TabIndex = 14;
-			this.equipoComboBox.ValueMember = "GolesContra";
+			this.equipoComboBox.ValueMember = "Id";
 			this.equipoComboBox.SelectionChangeCommitted += new System.EventHandler(this.equipoComboBox_SelectionChangeCommitted);
 			// 
 			// posicionBindingSource
