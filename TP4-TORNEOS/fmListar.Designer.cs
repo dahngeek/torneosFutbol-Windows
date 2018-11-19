@@ -275,7 +275,7 @@
             "Ordenar por Equipo",
             "Ordenar por pizza",
             "Podenar asdkfj"});
-			this.metroComboBox1.Location = new System.Drawing.Point(658, 171);
+			this.metroComboBox1.Location = new System.Drawing.Point(749, 177);
 			this.metroComboBox1.Name = "metroComboBox1";
 			this.metroComboBox1.Size = new System.Drawing.Size(484, 30);
 			this.metroComboBox1.Style = MetroFramework.MetroColorStyle.White;

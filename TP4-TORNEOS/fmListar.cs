@@ -25,7 +25,7 @@ namespace TP4_TORNEOS
 
             // Transparencia para las imagenes.
             tarjetaJugador.BackColor = Color.Transparent;
-
+			generarTabla();
 			// Transparencia para label sobre imagen. (vuelve la imagen el padre del label)
 
 
@@ -84,6 +84,11 @@ namespace TP4_TORNEOS
             pictureBox1.Location = pos;
             pictureBox1.BackColor = Color.Transparent;
         }
+
+		public void generarTabla()
+		{
+			
+		}
 
 		private void fmListar_KeyPress(object sender, KeyPressEventArgs e)
 		{
@@ -236,6 +241,11 @@ namespace TP4_TORNEOS
 			try
 			{
 				Jugador SelecionarJugador = (Jugador)jugadorBindingSource.Current;
+
+				// obtener todos los goles
+				//recorrerlos y comparar a ver si son de ese jugador
+				// llevar un contador
+				//lbGol.Text = SelecionarJugador.Apellido;
 				lbPosicion.Text = SelecionarJugador.Posicion.Nombre;
 				lbCamiseta.Text = SelecionarJugador.NumeroCamiseta.ToString();
 				pictureBox1.Load(SelecionarJugador.UrlImagen);

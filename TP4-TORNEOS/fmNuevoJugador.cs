@@ -82,5 +82,10 @@ namespace TP4_TORNEOS
 		{
 			Close();
 		}
+
+		private void equipoComboBox_SelectionChangeCommitted(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

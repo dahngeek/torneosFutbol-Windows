@@ -22,13 +22,10 @@ namespace TP4_TORNEOS
 			if (id > 0)
 			{
 				jugadorBindingSource.Add(pJugador.GetById(id));
+				equipoBindingSource.Add(pEquipo.GetById(id));
+				posicionBindingSource.Add(pPosicion.GetById(id));
 			}
-			else
-			{
-				Jugador p = new Jugador();
-				p.Id = 0;
-				jugadorBindingSource.Add(p);
-			}
+
 
 		}
 
