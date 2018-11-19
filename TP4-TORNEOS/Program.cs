@@ -16,7 +16,9 @@ namespace TP4_TORNEOS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Controladores.Conexion.OpenConexion();
             Application.Run(new PantallaPrincipal());
+            Controladores.Conexion.CloseConexion();
         }
     }
 }
