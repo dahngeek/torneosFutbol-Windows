@@ -20,6 +20,7 @@ namespace TP4_TORNEOS
             equipoBindingSource.DataSource = pEquipo.GetAll();
 
             configuracionBindingSource.DataSource = pConfiguracion.GetAll();
+            jugadorBindingSource.DataSource = pJugador.GetAll();
 
 
 
@@ -29,7 +30,7 @@ namespace TP4_TORNEOS
         {
             try
             {
-                Equipo eq = (Equipo)equipoBindingSource.Current;
+                //LKpo
                 List<Jugador> todosjugadores = new List<Jugador>();
                 todosjugadores = pJugador.GetAll();
 
@@ -178,6 +179,26 @@ namespace TP4_TORNEOS
             equipoBindingSource.DataSource = pEquipo.GetAll();
 
             //cbEquipos.SelectedIndex = (pEquipo.GetAll()).Count - 1;
+        }
+
+        private void btComprarJugador_Click(object sender, EventArgs e)
+        {
+            
+
+
+
+        }
+
+        private void btVenderJugador_Click(object sender, EventArgs e)
+        {
+
+
+            Jugador jugadorSeleccionado = (Jugador)jugadorBindingSource.Current;
+
+            jugadorSeleccionado.Equipo = null;
+
+            pJugador.Update(jugadorSeleccionado);
+
         }
     }
 }
