@@ -31,38 +31,31 @@
 			this.components = new System.ComponentModel.Container();
 			System.Windows.Forms.Label apellidoLabel;
 			System.Windows.Forms.Label apodoLabel;
-			System.Windows.Forms.Label idLabel;
 			System.Windows.Forms.Label nombreLabel;
 			System.Windows.Forms.Label numeroCamisetaLabel;
 			System.Windows.Forms.Label urlImagenLabel;
-			System.Windows.Forms.Label idLabel1;
-			System.Windows.Forms.Label nombreLabel1;
-			System.Windows.Forms.Label idLabel2;
-			System.Windows.Forms.Label nombreLabel2;
 			this.mBtCancelar = new MetroFramework.Controls.MetroButton();
 			this.mBtAceptar = new MetroFramework.Controls.MetroButton();
 			this.apellidoTextBox = new System.Windows.Forms.TextBox();
+			this.jugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.apodoTextBox = new System.Windows.Forms.TextBox();
-			this.idTextBox = new System.Windows.Forms.TextBox();
 			this.nombreTextBox = new System.Windows.Forms.TextBox();
 			this.numeroCamisetaTextBox = new System.Windows.Forms.TextBox();
 			this.urlImagenTextBox = new System.Windows.Forms.TextBox();
-			this.idTextBox1 = new System.Windows.Forms.TextBox();
-			this.nombreTextBox1 = new System.Windows.Forms.TextBox();
-			this.idTextBox2 = new System.Windows.Forms.TextBox();
-			this.nombreTextBox2 = new System.Windows.Forms.TextBox();
-			this.jugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.posicionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.posicionComboBox = new System.Windows.Forms.ComboBox();
+			this.equipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.equipoComboBox = new System.Windows.Forms.ComboBox();
+			this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+			this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
 			apellidoLabel = new System.Windows.Forms.Label();
 			apodoLabel = new System.Windows.Forms.Label();
-			idLabel = new System.Windows.Forms.Label();
 			nombreLabel = new System.Windows.Forms.Label();
 			numeroCamisetaLabel = new System.Windows.Forms.Label();
 			urlImagenLabel = new System.Windows.Forms.Label();
-			idLabel1 = new System.Windows.Forms.Label();
-			nombreLabel1 = new System.Windows.Forms.Label();
-			idLabel2 = new System.Windows.Forms.Label();
-			nombreLabel2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.jugadorBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.posicionBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// apellidoLabel
@@ -85,16 +78,6 @@
 			apodoLabel.TabIndex = 34;
 			apodoLabel.Text = "Apodo:";
 			// 
-			// idLabel
-			// 
-			idLabel.AutoSize = true;
-			idLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			idLabel.Location = new System.Drawing.Point(306, 168);
-			idLabel.Name = "idLabel";
-			idLabel.Size = new System.Drawing.Size(23, 17);
-			idLabel.TabIndex = 36;
-			idLabel.Text = "Id:";
-			// 
 			// nombreLabel
 			// 
 			nombreLabel.AutoSize = true;
@@ -109,7 +92,7 @@
 			// 
 			numeroCamisetaLabel.AutoSize = true;
 			numeroCamisetaLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			numeroCamisetaLabel.Location = new System.Drawing.Point(306, 195);
+			numeroCamisetaLabel.Location = new System.Drawing.Point(306, 169);
 			numeroCamisetaLabel.Name = "numeroCamisetaLabel";
 			numeroCamisetaLabel.Size = new System.Drawing.Size(124, 17);
 			numeroCamisetaLabel.TabIndex = 40;
@@ -119,51 +102,11 @@
 			// 
 			urlImagenLabel.AutoSize = true;
 			urlImagenLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			urlImagenLabel.Location = new System.Drawing.Point(306, 223);
+			urlImagenLabel.Location = new System.Drawing.Point(306, 197);
 			urlImagenLabel.Name = "urlImagenLabel";
 			urlImagenLabel.Size = new System.Drawing.Size(80, 17);
 			urlImagenLabel.TabIndex = 42;
 			urlImagenLabel.Text = "Url Imagen:";
-			// 
-			// idLabel1
-			// 
-			idLabel1.AutoSize = true;
-			idLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			idLabel1.Location = new System.Drawing.Point(306, 287);
-			idLabel1.Name = "idLabel1";
-			idLabel1.Size = new System.Drawing.Size(23, 17);
-			idLabel1.TabIndex = 43;
-			idLabel1.Text = "Id:";
-			// 
-			// nombreLabel1
-			// 
-			nombreLabel1.AutoSize = true;
-			nombreLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			nombreLabel1.Location = new System.Drawing.Point(306, 315);
-			nombreLabel1.Name = "nombreLabel1";
-			nombreLabel1.Size = new System.Drawing.Size(56, 17);
-			nombreLabel1.TabIndex = 45;
-			nombreLabel1.Text = "Equipo:";
-			// 
-			// idLabel2
-			// 
-			idLabel2.AutoSize = true;
-			idLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			idLabel2.Location = new System.Drawing.Point(306, 377);
-			idLabel2.Name = "idLabel2";
-			idLabel2.Size = new System.Drawing.Size(23, 17);
-			idLabel2.TabIndex = 46;
-			idLabel2.Text = "Id:";
-			// 
-			// nombreLabel2
-			// 
-			nombreLabel2.AutoSize = true;
-			nombreLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			nombreLabel2.Location = new System.Drawing.Point(306, 405);
-			nombreLabel2.Name = "nombreLabel2";
-			nombreLabel2.Size = new System.Drawing.Size(65, 17);
-			nombreLabel2.TabIndex = 48;
-			nombreLabel2.Text = "Posicion:";
 			// 
 			// mBtCancelar
 			// 
@@ -195,6 +138,10 @@
 			this.apellidoTextBox.Size = new System.Drawing.Size(100, 22);
 			this.apellidoTextBox.TabIndex = 33;
 			// 
+			// jugadorBindingSource
+			// 
+			this.jugadorBindingSource.DataSource = typeof(TP4_TORNEOS.Entidades.Jugador);
+			// 
 			// apodoTextBox
 			// 
 			this.apodoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jugadorBindingSource, "Apodo", true));
@@ -202,14 +149,6 @@
 			this.apodoTextBox.Name = "apodoTextBox";
 			this.apodoTextBox.Size = new System.Drawing.Size(100, 22);
 			this.apodoTextBox.TabIndex = 35;
-			// 
-			// idTextBox
-			// 
-			this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jugadorBindingSource, "Id", true));
-			this.idTextBox.Location = new System.Drawing.Point(436, 165);
-			this.idTextBox.Name = "idTextBox";
-			this.idTextBox.Size = new System.Drawing.Size(100, 22);
-			this.idTextBox.TabIndex = 37;
 			// 
 			// nombreTextBox
 			// 
@@ -222,7 +161,7 @@
 			// numeroCamisetaTextBox
 			// 
 			this.numeroCamisetaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jugadorBindingSource, "NumeroCamiseta", true));
-			this.numeroCamisetaTextBox.Location = new System.Drawing.Point(436, 192);
+			this.numeroCamisetaTextBox.Location = new System.Drawing.Point(436, 166);
 			this.numeroCamisetaTextBox.Name = "numeroCamisetaTextBox";
 			this.numeroCamisetaTextBox.Size = new System.Drawing.Size(100, 22);
 			this.numeroCamisetaTextBox.TabIndex = 41;
@@ -230,66 +169,74 @@
 			// urlImagenTextBox
 			// 
 			this.urlImagenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jugadorBindingSource, "UrlImagen", true));
-			this.urlImagenTextBox.Location = new System.Drawing.Point(436, 220);
+			this.urlImagenTextBox.Location = new System.Drawing.Point(436, 194);
 			this.urlImagenTextBox.Name = "urlImagenTextBox";
 			this.urlImagenTextBox.Size = new System.Drawing.Size(100, 22);
 			this.urlImagenTextBox.TabIndex = 43;
 			// 
-			// idTextBox1
+			// posicionBindingSource
 			// 
-			this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jugadorBindingSource, "Equipo.Id", true));
-			this.idTextBox1.Location = new System.Drawing.Point(374, 284);
-			this.idTextBox1.Name = "idTextBox1";
-			this.idTextBox1.Size = new System.Drawing.Size(100, 22);
-			this.idTextBox1.TabIndex = 44;
+			this.posicionBindingSource.DataSource = typeof(TP4_TORNEOS.Entidades.Posicion);
 			// 
-			// nombreTextBox1
+			// posicionComboBox
 			// 
-			this.nombreTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jugadorBindingSource, "Equipo.Nombre", true));
-			this.nombreTextBox1.Location = new System.Drawing.Point(374, 312);
-			this.nombreTextBox1.Name = "nombreTextBox1";
-			this.nombreTextBox1.Size = new System.Drawing.Size(100, 22);
-			this.nombreTextBox1.TabIndex = 46;
+			this.posicionComboBox.DataSource = this.posicionBindingSource;
+			this.posicionComboBox.DisplayMember = "Nombre";
+			this.posicionComboBox.FormattingEnabled = true;
+			this.posicionComboBox.Location = new System.Drawing.Point(309, 352);
+			this.posicionComboBox.Name = "posicionComboBox";
+			this.posicionComboBox.Size = new System.Drawing.Size(300, 24);
+			this.posicionComboBox.TabIndex = 43;
+			this.posicionComboBox.ValueMember = "Id";
 			// 
-			// idTextBox2
+			// equipoBindingSource
 			// 
-			this.idTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jugadorBindingSource, "Posicion.Id", true));
-			this.idTextBox2.Location = new System.Drawing.Point(374, 374);
-			this.idTextBox2.Name = "idTextBox2";
-			this.idTextBox2.Size = new System.Drawing.Size(100, 22);
-			this.idTextBox2.TabIndex = 47;
+			this.equipoBindingSource.DataSource = typeof(TP4_TORNEOS.Entidades.Equipo);
 			// 
-			// nombreTextBox2
+			// equipoComboBox
 			// 
-			this.nombreTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jugadorBindingSource, "Posicion.Nombre", true));
-			this.nombreTextBox2.Location = new System.Drawing.Point(374, 402);
-			this.nombreTextBox2.Name = "nombreTextBox2";
-			this.nombreTextBox2.Size = new System.Drawing.Size(100, 22);
-			this.nombreTextBox2.TabIndex = 49;
+			this.equipoComboBox.DataSource = this.equipoBindingSource;
+			this.equipoComboBox.DisplayMember = "Nombre";
+			this.equipoComboBox.FormattingEnabled = true;
+			this.equipoComboBox.Location = new System.Drawing.Point(309, 278);
+			this.equipoComboBox.Name = "equipoComboBox";
+			this.equipoComboBox.Size = new System.Drawing.Size(300, 24);
+			this.equipoComboBox.TabIndex = 43;
+			this.equipoComboBox.ValueMember = "GolesContra";
 			// 
-			// jugadorBindingSource
+			// metroLabel1
 			// 
-			this.jugadorBindingSource.DataSource = typeof(TP4_TORNEOS.Entidades.Jugador);
+			this.metroLabel1.AutoSize = true;
+			this.metroLabel1.Location = new System.Drawing.Point(309, 242);
+			this.metroLabel1.Name = "metroLabel1";
+			this.metroLabel1.Size = new System.Drawing.Size(59, 20);
+			this.metroLabel1.TabIndex = 44;
+			this.metroLabel1.Text = "Equipo: ";
+			this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+			// 
+			// metroLabel2
+			// 
+			this.metroLabel2.AutoSize = true;
+			this.metroLabel2.Location = new System.Drawing.Point(309, 317);
+			this.metroLabel2.Name = "metroLabel2";
+			this.metroLabel2.Size = new System.Drawing.Size(66, 20);
+			this.metroLabel2.TabIndex = 45;
+			this.metroLabel2.Text = "Posicion: ";
+			this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
 			// 
 			// fmModificarJugador
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(827, 555);
-			this.Controls.Add(idLabel2);
-			this.Controls.Add(this.idTextBox2);
-			this.Controls.Add(nombreLabel2);
-			this.Controls.Add(this.nombreTextBox2);
-			this.Controls.Add(idLabel1);
-			this.Controls.Add(this.idTextBox1);
-			this.Controls.Add(nombreLabel1);
-			this.Controls.Add(this.nombreTextBox1);
+			this.Controls.Add(this.metroLabel2);
+			this.Controls.Add(this.metroLabel1);
+			this.Controls.Add(this.equipoComboBox);
+			this.Controls.Add(this.posicionComboBox);
 			this.Controls.Add(apellidoLabel);
 			this.Controls.Add(this.apellidoTextBox);
 			this.Controls.Add(apodoLabel);
 			this.Controls.Add(this.apodoTextBox);
-			this.Controls.Add(idLabel);
-			this.Controls.Add(this.idTextBox);
 			this.Controls.Add(nombreLabel);
 			this.Controls.Add(this.nombreTextBox);
 			this.Controls.Add(numeroCamisetaLabel);
@@ -304,6 +251,8 @@
 			this.Theme = MetroFramework.MetroThemeStyle.Dark;
 			this.TopMost = true;
 			((System.ComponentModel.ISupportInitialize)(this.jugadorBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.posicionBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -315,13 +264,14 @@
 		private System.Windows.Forms.BindingSource jugadorBindingSource;
 		private System.Windows.Forms.TextBox apellidoTextBox;
 		private System.Windows.Forms.TextBox apodoTextBox;
-		private System.Windows.Forms.TextBox idTextBox;
 		private System.Windows.Forms.TextBox nombreTextBox;
 		private System.Windows.Forms.TextBox numeroCamisetaTextBox;
 		private System.Windows.Forms.TextBox urlImagenTextBox;
-		private System.Windows.Forms.TextBox idTextBox1;
-		private System.Windows.Forms.TextBox nombreTextBox1;
-		private System.Windows.Forms.TextBox idTextBox2;
-		private System.Windows.Forms.TextBox nombreTextBox2;
+		private System.Windows.Forms.BindingSource posicionBindingSource;
+		private System.Windows.Forms.ComboBox posicionComboBox;
+		private System.Windows.Forms.BindingSource equipoBindingSource;
+		private System.Windows.Forms.ComboBox equipoComboBox;
+		private MetroFramework.Controls.MetroLabel metroLabel1;
+		private MetroFramework.Controls.MetroLabel metroLabel2;
 	}
 }

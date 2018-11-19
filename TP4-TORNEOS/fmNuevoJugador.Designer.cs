@@ -45,6 +45,8 @@
 			this.equipoComboBox = new System.Windows.Forms.ComboBox();
 			this.posicionBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.posicionComboBox = new System.Windows.Forms.ComboBox();
+			this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+			this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
 			numeroCamisetaLabel = new System.Windows.Forms.Label();
 			apellidoLabel = new System.Windows.Forms.Label();
 			urlImagenLabel = new System.Windows.Forms.Label();
@@ -170,11 +172,12 @@
 			this.equipoComboBox.DataSource = this.equipoBindingSource;
 			this.equipoComboBox.DisplayMember = "Nombre";
 			this.equipoComboBox.FormattingEnabled = true;
-			this.equipoComboBox.Location = new System.Drawing.Point(235, 326);
+			this.equipoComboBox.Location = new System.Drawing.Point(270, 303);
 			this.equipoComboBox.Name = "equipoComboBox";
 			this.equipoComboBox.Size = new System.Drawing.Size(300, 24);
 			this.equipoComboBox.TabIndex = 14;
 			this.equipoComboBox.ValueMember = "GolesContra";
+			this.equipoComboBox.SelectionChangeCommitted += new System.EventHandler(this.equipoComboBox_SelectionChangeCommitted);
 			// 
 			// posicionBindingSource
 			// 
@@ -185,17 +188,39 @@
 			this.posicionComboBox.DataSource = this.posicionBindingSource;
 			this.posicionComboBox.DisplayMember = "Nombre";
 			this.posicionComboBox.FormattingEnabled = true;
-			this.posicionComboBox.Location = new System.Drawing.Point(235, 381);
+			this.posicionComboBox.Location = new System.Drawing.Point(270, 379);
 			this.posicionComboBox.Name = "posicionComboBox";
 			this.posicionComboBox.Size = new System.Drawing.Size(300, 24);
 			this.posicionComboBox.TabIndex = 15;
 			this.posicionComboBox.ValueMember = "Id";
+			// 
+			// metroLabel2
+			// 
+			this.metroLabel2.AutoSize = true;
+			this.metroLabel2.Location = new System.Drawing.Point(270, 344);
+			this.metroLabel2.Name = "metroLabel2";
+			this.metroLabel2.Size = new System.Drawing.Size(66, 20);
+			this.metroLabel2.TabIndex = 46;
+			this.metroLabel2.Text = "Posicion: ";
+			this.metroLabel2.Theme = MetroFramework.MetroThemeStyle.Dark;
+			// 
+			// metroLabel1
+			// 
+			this.metroLabel1.AutoSize = true;
+			this.metroLabel1.Location = new System.Drawing.Point(270, 266);
+			this.metroLabel1.Name = "metroLabel1";
+			this.metroLabel1.Size = new System.Drawing.Size(59, 20);
+			this.metroLabel1.TabIndex = 47;
+			this.metroLabel1.Text = "Equipo: ";
+			this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
 			// 
 			// fmNuevoJugador
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(822, 528);
+			this.Controls.Add(this.metroLabel1);
+			this.Controls.Add(this.metroLabel2);
 			this.Controls.Add(this.posicionComboBox);
 			this.Controls.Add(this.equipoComboBox);
 			this.Controls.Add(apellidoLabel);
@@ -236,5 +261,7 @@
 		private System.Windows.Forms.ComboBox equipoComboBox;
 		private System.Windows.Forms.BindingSource posicionBindingSource;
 		private System.Windows.Forms.ComboBox posicionComboBox;
+		private MetroFramework.Controls.MetroLabel metroLabel2;
+		private MetroFramework.Controls.MetroLabel metroLabel1;
 	}
 }
