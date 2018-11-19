@@ -112,6 +112,12 @@
     <Compile Include="fmNuevoJugador.Designer.cs">
       <DependentUpon>fmNuevoJugador.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEncuentro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEncuentro.Designer.cs">
+      <DependentUpon>frmEncuentro.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fmNuevoJugador.resx">
       <DependentUpon>fmNuevoJugador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEncuentro.resx">
+      <DependentUpon>frmEncuentro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>

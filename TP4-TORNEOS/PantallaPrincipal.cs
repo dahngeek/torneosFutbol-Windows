@@ -190,5 +190,10 @@ namespace TP4_TORNEOS
 		{
 		
 		}
-	}
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+            new frmEncuentro().ShowDialog();
+        }
+    }
 }

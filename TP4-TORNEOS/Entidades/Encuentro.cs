@@ -26,10 +26,24 @@ namespace TP4_TORNEOS.Entidades
             this.Arbitro = arbitro;
         }
 
+        public string getNombreEquipoVisitante() {
+            return this.EquipoVisitante.Nombre;
+        }
+
+        public string getArbitro()
+        {
+            return this.Arbitro.Nombre + " " + this.Arbitro.Apellido;
+        }
+
+        public string getNombreEquipoLocal()
+        {
+            return this.EquipoLocal.Nombre;
+        }
+
         public int Id { get => id; set => id = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }
-        internal Equipo EquipoLocal { get => equipoLocal; set => equipoLocal = value; }
-        internal Equipo EquipoVisitante { get => equipoVisitante; set => equipoVisitante = value; }
-        internal Arbitro Arbitro { get => arbitro; set => arbitro = value; }
+        public Equipo EquipoLocal { get => equipoLocal; set => equipoLocal = value; }
+        public Equipo EquipoVisitante { get => equipoVisitante; set => equipoVisitante = value; }
+        public Arbitro Arbitro { get => arbitro; set => arbitro = value; }
     }
 }
