@@ -28,18 +28,43 @@ namespace TP4_TORNEOS
 
         private List<Equipo> OrdenaEquipos()
         {
+            bool cambios = false;
+
             List<Equipo> equipos = new List<Equipo>();
             equipos = pEquipo.GetAll();
-            for (int i = 0; i < equipos.Count - 1; i++)
+
+            do
             {
-                if (equipos[i].Puntos < equipos[i + 1].Puntos)
+
+                cambios = false;
+
+                for (int i = 0; i < equipos.Count - 1; i++)
                 {
-                    Equipo e = new Equipo();
-                    e = equipos[i];
-                    equipos[i] = equipos[i + 1];
-                    equipos[i + 1] = e;
+                    if (equipos[i].Puntos < equipos[i + 1].Puntos)
+                    {
+                        Equipo e = new Equipo();
+                        e = equipos[i];
+                        equipos[i] = equipos[i + 1];
+                        equipos[i + 1] = e;
+                        cambios = true;
+                    }
+
+                    if (equipos[i].Puntos == equipos[i+1].Puntos)
+                    {
+                        if (equipos[i].GolesFavor < equipos[i+1].GolesFavor)
+                        {
+                            Equipo e = new Equipo();
+                            e = equipos[i];
+                            equipos[i] = equipos[i + 1];
+                            equipos[i + 1] = e;
+                            cambios = true;
+                        }
+                    }
+
+
                 }
-            }
+
+            } while (cambios);
             return equipos;
         }
 
