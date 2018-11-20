@@ -88,12 +88,6 @@
     <Compile Include="fmArbitro.Designer.cs">
       <DependentUpon>fmArbitro.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmEliminarJugador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fmEliminarJugador.Designer.cs">
-      <DependentUpon>fmEliminarJugador.cs</DependentUpon>
-    </Compile>
     <Compile Include="fmListar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,9 +134,6 @@
     </Compile>
     <EmbeddedResource Include="fmArbitro.resx">
       <DependentUpon>fmArbitro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fmEliminarJugador.resx">
-      <DependentUpon>fmEliminarJugador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmListar.resx">
       <DependentUpon>fmListar.cs</DependentUpon>

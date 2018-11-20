@@ -241,11 +241,12 @@ namespace TP4_TORNEOS
 			try
 			{
 				Jugador SelecionarJugador = (Jugador)jugadorBindingSource.Current;
-
+				
+				int goles = pGoles.GetByJugador(SelecionarJugador.Id).Count();
 				// obtener todos los goles
-				//recorrerlos y comparar a ver si son de ese jugador
+				// recorrerlos y comparar a ver si son de ese jugador
 				// llevar un contador
-				//lbGol.Text = SelecionarJugador.Apellido;
+				lbGol.Text = goles.ToString();
 				lbPosicion.Text = SelecionarJugador.Posicion.Nombre;
 				lbCamiseta.Text = SelecionarJugador.NumeroCamiseta.ToString();
 				pictureBox1.Load(SelecionarJugador.UrlImagen);
