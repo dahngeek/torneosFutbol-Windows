@@ -20,7 +20,7 @@ namespace TP4_TORNEOS
             equipoBindingSource.DataSource = pEquipo.GetAll();
 
             configuracionBindingSource.DataSource = pConfiguracion.GetAll();
-            jugadorBindingSource.DataSource = pJugador.GetAll();
+            //jugadorBindingSource.DataSource = pJugador.GetAll();
 
 
 
@@ -192,13 +192,56 @@ namespace TP4_TORNEOS
         private void btVenderJugador_Click(object sender, EventArgs e)
         {
 
-
             Jugador jugadorSeleccionado = (Jugador)jugadorBindingSource.Current;
+            fmVenderJugador Vender = new fmVenderJugador(jugadorSeleccionado.Id);
 
-            jugadorSeleccionado.Equipo = null;
+            Vender.ShowDialog();
+            jugadorSeleccionado = pJugador.GetById(jugadorSeleccionado.Id);
+            equipoBindingSource.Position = jugadorSeleccionado.Equipo.Id - 1;
+                // SelectedIndex = jugadorSeleccionado.Equipo.Id - 1;
+            //cbEquipoDestino.Visible = true;
+            //btComprarJugador.Visible = false;
+            //btVenderJugador.Visible = false;
+            //btCrear.Visible = false;
+            //btModificar.Visible = false;
+            //btVender.Visible = true;
+            //cbEquipos.Visible = true;
+            //metroGrid1.Visible = true;
+            //lbNombreJugador.Visible = true;
+            //lbNombreJugador.Text = (((Jugador)jugadorBindingSource.Current).Nombre + " " + ((Jugador)jugadorBindingSource.Current).Apellido).ToString();
 
-            pJugador.Update(jugadorSeleccionado);
+        }
 
+        private void btVender_Click(object sender, EventArgs e)
+        {
+            //Jugador jugadorSeleccionado = (Jugador)jugadorBindingSource.Current;
+            //cbEquipos.BindingContext = new BindingContext();
+            //cbEquipoDestino.BindingContext = new BindingContext();
+            //cbEquipoDestino.DataSource = pEquipo.GetAll();
+            //Equipo equipoDestino = pEquipo.GetById(cbEquipoDestino.SelectedIndex - 1);
+            //jugadorSeleccionado.Equipo = equipoDestino;
+
+            //pJugador.Update(jugadorSeleccionado);
+
+            //cbEquipoDestino.Visible = false;
+            //btComprarJugador.Visible = true;
+            //btVenderJugador.Visible = true;
+            //btCrear.Visible = true;
+            //btModificar.Visible = true;
+            //btVender.Visible = false;
+            //cbEquipos.Visible = true;
+            //metroGrid1.Visible = true;
+            //lbNombreJugador.Visible = false;
+
+            //equipoBindingSource.DataSource = pEquipo.GetAll();
+
+
+
+        }
+
+        private void btSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
