@@ -40,9 +40,20 @@ namespace TP4_TORNEOS
                     equipos[i + 1] = e;
                 }
             }
-
             return equipos;
         }
 
+        private void btModificar_Click(object sender, EventArgs e)
+        {
+            fmModificarEquipo fmModEq = new fmModificarEquipo();
+            fmModEq.ShowDialog();
+        }
+
+        private void btIrPantallaPrincipal_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            PantallaPrincipal pp = new PantallaPrincipal();
+            pp.Show();
+        }
     }
 }

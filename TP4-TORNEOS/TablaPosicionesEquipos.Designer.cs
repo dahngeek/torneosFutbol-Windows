@@ -32,22 +32,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.equipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btModificar = new MetroFramework.Controls.MetroButton();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            this.btIrPantallaPrincipal = new MetroFramework.Controls.MetroButton();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.puntosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.golesFavorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.golesContraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).BeginInit();
+            this.equipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // equipoBindingSource
-            // 
-            this.equipoBindingSource.DataSource = typeof(TP4_TORNEOS.Entidades.Equipo);
-            this.equipoBindingSource.CurrentChanged += new System.EventHandler(this.equipoBindingSource_CurrentChanged);
             // 
             // btModificar
             // 
@@ -56,7 +52,9 @@
             this.btModificar.Size = new System.Drawing.Size(199, 23);
             this.btModificar.TabIndex = 0;
             this.btModificar.Text = "Modificar Equipos";
+            this.btModificar.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btModificar.UseSelectable = true;
+            this.btModificar.Click += new System.EventHandler(this.btModificar_Click);
             // 
             // metroGrid1
             // 
@@ -114,6 +112,17 @@
             this.metroGrid1.TabIndex = 1;
             this.metroGrid1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
+            // btIrPantallaPrincipal
+            // 
+            this.btIrPantallaPrincipal.Location = new System.Drawing.Point(586, 397);
+            this.btIrPantallaPrincipal.Name = "btIrPantallaPrincipal";
+            this.btIrPantallaPrincipal.Size = new System.Drawing.Size(129, 23);
+            this.btIrPantallaPrincipal.TabIndex = 2;
+            this.btIrPantallaPrincipal.Text = "Volver al Inicio";
+            this.btIrPantallaPrincipal.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btIrPantallaPrincipal.UseSelectable = true;
+            this.btIrPantallaPrincipal.Click += new System.EventHandler(this.btIrPantallaPrincipal_Click);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -149,19 +158,25 @@
             this.golesContraDataGridViewTextBoxColumn.Name = "golesContraDataGridViewTextBoxColumn";
             this.golesContraDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // equipoBindingSource
+            // 
+            this.equipoBindingSource.DataSource = typeof(TP4_TORNEOS.Entidades.Equipo);
+            this.equipoBindingSource.CurrentChanged += new System.EventHandler(this.equipoBindingSource_CurrentChanged);
+            // 
             // TablaPosicionesEquipos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btIrPantallaPrincipal);
             this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.btModificar);
             this.Name = "TablaPosicionesEquipos";
             this.Style = MetroFramework.MetroColorStyle.Teal;
-            this.Text = "TablaPosicionesEquipos";
+            this.Text = "Tabla de Posiciones";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
-            ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -176,5 +191,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn puntosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn golesFavorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn golesContraDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroButton btIrPantallaPrincipal;
     }
 }

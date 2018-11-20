@@ -30,14 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmModificarEquipo));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btCrear = new MetroFramework.Controls.MetroButton();
             this.cbEquipos = new MetroFramework.Controls.MetroComboBox();
             this.equipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btVenderJugador = new MetroFramework.Controls.MetroButton();
-            this.btComprarJugador = new MetroFramework.Controls.MetroButton();
             this.btModificar = new MetroFramework.Controls.MetroButton();
             this.lbNombreEquipo = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -49,7 +48,6 @@
             this.lbGCEq = new MetroFramework.Controls.MetroLabel();
             this.jugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apodoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +62,7 @@
             this.btAnadir = new MetroFramework.Controls.MetroButton();
             this.btCancelarAnadir = new MetroFramework.Controls.MetroButton();
             this.btModificarEquipo = new MetroFramework.Controls.MetroButton();
+            this.btSalir = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jugadorBindingSource)).BeginInit();
@@ -74,7 +73,7 @@
             // 
             // btCrear
             // 
-            this.btCrear.Location = new System.Drawing.Point(653, 96);
+            this.btCrear.Location = new System.Drawing.Point(652, 66);
             this.btCrear.Name = "btCrear";
             this.btCrear.Size = new System.Drawing.Size(105, 29);
             this.btCrear.TabIndex = 1;
@@ -89,7 +88,7 @@
             this.cbEquipos.DisplayMember = "Nombre";
             this.cbEquipos.FormattingEnabled = true;
             this.cbEquipos.ItemHeight = 23;
-            this.cbEquipos.Location = new System.Drawing.Point(502, 96);
+            this.cbEquipos.Location = new System.Drawing.Point(501, 67);
             this.cbEquipos.Name = "cbEquipos";
             this.cbEquipos.PromptText = "(Seleccione Equipo)";
             this.cbEquipos.Size = new System.Drawing.Size(145, 29);
@@ -107,25 +106,14 @@
             // 
             // btVenderJugador
             // 
-            this.btVenderJugador.Location = new System.Drawing.Point(653, 409);
+            this.btVenderJugador.Location = new System.Drawing.Point(653, 321);
             this.btVenderJugador.Name = "btVenderJugador";
             this.btVenderJugador.Size = new System.Drawing.Size(104, 23);
             this.btVenderJugador.TabIndex = 3;
-            this.btVenderJugador.Text = "Vender Jugador";
+            this.btVenderJugador.Text = "Transferir Jugador";
             this.btVenderJugador.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btVenderJugador.UseSelectable = true;
             this.btVenderJugador.Click += new System.EventHandler(this.btVenderJugador_Click);
-            // 
-            // btComprarJugador
-            // 
-            this.btComprarJugador.Location = new System.Drawing.Point(533, 409);
-            this.btComprarJugador.Name = "btComprarJugador";
-            this.btComprarJugador.Size = new System.Drawing.Size(103, 23);
-            this.btComprarJugador.TabIndex = 4;
-            this.btComprarJugador.Text = "Comprar Jugador";
-            this.btComprarJugador.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.btComprarJugador.UseSelectable = true;
-            this.btComprarJugador.Click += new System.EventHandler(this.btComprarJugador_Click);
             // 
             // btModificar
             // 
@@ -230,23 +218,23 @@
             // 
             this.metroGrid1.AllowUserToAddRows = false;
             this.metroGrid1.AllowUserToDeleteRows = false;
+            this.metroGrid1.AllowUserToResizeColumns = false;
             this.metroGrid1.AllowUserToResizeRows = false;
             this.metroGrid1.AutoGenerateColumns = false;
             this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
             this.nombreDataGridViewTextBoxColumn,
             this.apellidoDataGridViewTextBoxColumn,
             this.apodoDataGridViewTextBoxColumn,
@@ -255,43 +243,35 @@
             this.dataGridViewTextBoxColumn1,
             this.urlImagenDataGridViewTextBoxColumn});
             this.metroGrid1.DataSource = this.jugadorBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.metroGrid1.Location = new System.Drawing.Point(401, 146);
+            this.metroGrid1.Location = new System.Drawing.Point(401, 109);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.ReadOnly = true;
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid1.Size = new System.Drawing.Size(356, 194);
             this.metroGrid1.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroGrid1.TabIndex = 14;
             this.metroGrid1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -425,11 +405,23 @@
             this.btModificarEquipo.Visible = false;
             this.btModificarEquipo.Click += new System.EventHandler(this.btModificarEquipo_Click);
             // 
+            // btSalir
+            // 
+            this.btSalir.Location = new System.Drawing.Point(653, 394);
+            this.btSalir.Name = "btSalir";
+            this.btSalir.Size = new System.Drawing.Size(104, 23);
+            this.btSalir.TabIndex = 20;
+            this.btSalir.Text = "Salir";
+            this.btSalir.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.btSalir.UseSelectable = true;
+            this.btSalir.Click += new System.EventHandler(this.btSalir_Click);
+            // 
             // fmModificarEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btModificarEquipo);
             this.Controls.Add(this.btCancelarAnadir);
             this.Controls.Add(this.btAnadir);
@@ -445,13 +437,12 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbNombreEquipo);
             this.Controls.Add(this.btModificar);
-            this.Controls.Add(this.btComprarJugador);
             this.Controls.Add(this.btVenderJugador);
             this.Controls.Add(this.cbEquipos);
             this.Controls.Add(this.btCrear);
             this.Name = "fmModificarEquipo";
             this.Style = MetroFramework.MetroColorStyle.Teal;
-            this.Text = "fmModificarEquipo";
+            this.Text = "Modificar Equipos";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -468,7 +459,6 @@
         private MetroFramework.Controls.MetroButton btCrear;
         private MetroFramework.Controls.MetroComboBox cbEquipos;
         private MetroFramework.Controls.MetroButton btVenderJugador;
-        private MetroFramework.Controls.MetroButton btComprarJugador;
         private MetroFramework.Controls.MetroButton btModificar;
         private MetroFramework.Controls.MetroLabel lbNombreEquipo;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -482,14 +472,6 @@
         private System.Windows.Forms.BindingSource equipoBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn posicionDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroGrid metroGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apodoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeroCamisetaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urlImagenDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroTextBox txNombreEquipo;
         private MetroFramework.Controls.MetroComboBox cbConfiguracion;
         private System.Windows.Forms.BindingSource posicionBindingSource;
@@ -497,5 +479,13 @@
         private System.Windows.Forms.BindingSource configuracionBindingSource;
         private MetroFramework.Controls.MetroButton btCancelarAnadir;
         private MetroFramework.Controls.MetroButton btModificarEquipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apodoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroCamisetaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urlImagenDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroButton btSalir;
     }
 }
