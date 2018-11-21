@@ -94,6 +94,18 @@
     <Compile Include="fmArbitro.Designer.cs">
       <DependentUpon>fmArbitro.cs</DependentUpon>
     </Compile>
+    <Compile Include="fmEncuentroDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmEncuentroDetalle.Designer.cs">
+      <DependentUpon>fmEncuentroDetalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmGolAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmGolAgregar.Designer.cs">
+      <DependentUpon>fmGolAgregar.cs</DependentUpon>
+    </Compile>
     <Compile Include="fmListar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +161,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fmArbitro.resx">
       <DependentUpon>fmArbitro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmEncuentroDetalle.resx">
+      <DependentUpon>fmEncuentroDetalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmGolAgregar.resx">
+      <DependentUpon>fmGolAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmListar.resx">
       <DependentUpon>fmListar.cs</DependentUpon>

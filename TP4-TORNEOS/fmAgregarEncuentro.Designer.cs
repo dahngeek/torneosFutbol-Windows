@@ -155,6 +155,7 @@
             this.tblArbitro.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tblArbitro.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.tblArbitro.Location = new System.Drawing.Point(121, 212);
+            this.tblArbitro.MultiSelect = false;
             this.tblArbitro.Name = "tblArbitro";
             this.tblArbitro.ReadOnly = true;
             this.tblArbitro.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;

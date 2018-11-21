@@ -73,6 +73,7 @@
             this.encuentrosTable.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.encuentrosTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.encuentrosTable.Location = new System.Drawing.Point(215, 97);
+            this.encuentrosTable.MultiSelect = false;
             this.encuentrosTable.Name = "encuentrosTable";
             this.encuentrosTable.ReadOnly = true;
             this.encuentrosTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -86,7 +87,7 @@
             this.encuentrosTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.encuentrosTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.encuentrosTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.encuentrosTable.Size = new System.Drawing.Size(542, 322);
+            this.encuentrosTable.Size = new System.Drawing.Size(542, 181);
             this.encuentrosTable.TabIndex = 0;
             this.encuentrosTable.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
@@ -122,6 +123,7 @@
             this.btnEliminarEncuentro.Text = "Eliminar";
             this.btnEliminarEncuentro.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.btnEliminarEncuentro.UseSelectable = true;
+            this.btnEliminarEncuentro.Click += new System.EventHandler(this.btnEliminarEncuentro_Click);
             // 
             // pictureBox1
             // 
@@ -141,12 +143,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 454);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(800, 315);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnEliminarEncuentro);
             this.Controls.Add(this.btnModificarEncuentro);
             this.Controls.Add(this.btnNuevoEncuentro);
             this.Controls.Add(this.encuentrosTable);
+            this.MaximizeBox = false;
             this.Name = "frmEncuentro";
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "Encuentros";

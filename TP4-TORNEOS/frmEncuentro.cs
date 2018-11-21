@@ -13,6 +13,7 @@ namespace TP4_TORNEOS
 {
     public partial class frmEncuentro : MetroFramework.Forms.MetroForm
     {
+        List<Encuentro> encuentros;
         public frmEncuentro()
         {
             InitializeComponent();
@@ -20,8 +21,8 @@ namespace TP4_TORNEOS
         }
 
         public void generarTabla() {
-            List<Encuentro> encuentros = Controladores.pEncuentro.GetAll();
-
+            encuentros = Controladores.pEncuentro.GetAll();
+            encuentrosTable.Rows.Clear();
             // Defino las columnas de la tabla
             encuentrosTable.ColumnCount = 6;
             encuentrosTable.Columns[0].Name = "Fecha del Encuentro";
@@ -58,14 +59,27 @@ namespace TP4_TORNEOS
 
         private void btnModificarEncuentro_Click(object sender, EventArgs e)
         {
-
+            Encuentro enc = encuentros[encuentrosTable.CurrentCell.RowIndex];
+            int idEncuentro = enc.Id;
+            this.Opacity = 0; //ocultar esta ventana
+            new fmEncuentroDetalle(idEncuentro).ShowDialog(); //Abrir la ventana de detalle
+            generarTabla();
+            this.Opacity = 1; //mostsrar esta ventana
         }
 
         private void btnNuevoEncuentro_Click(object sender, EventArgs e)
         {
             this.Opacity = 0; //Ocultar ventana
             new fmAgregarEncuentro().ShowDialog();
+            generarTabla();
             this.Opacity = 1; //Mostrar ventana
+        }
+
+        private void btnEliminarEncuentro_Click(object sender, EventArgs e)
+        {
+            Encuentro enc = encuentros[encuentrosTable.CurrentCell.RowIndex];
+            Controladores.pEncuentro.Delete(enc);
+            generarTabla();
         }
     }
 }

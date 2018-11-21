@@ -31,8 +31,8 @@ namespace TP4_TORNEOS.Entidades
 
         public int Id { get => id; set => id = value; }
         public int Minuto { get => minuto; set => minuto = value; }
-        internal TipoTarjeta Tarjeta { get => tarjeta; set => tarjeta = value; }
-        internal Jugador Jugador { get => jugador; set => jugador = value; }
+        public TipoTarjeta Tarjeta { get => tarjeta; set => tarjeta = value; }
+        public Jugador Jugador { get => jugador; set => jugador = value; }
         internal Encuentro Encuentro { get => encuentro; set => encuentro = value; }
     }
 }
