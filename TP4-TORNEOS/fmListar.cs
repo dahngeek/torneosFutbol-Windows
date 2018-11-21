@@ -210,30 +210,88 @@ namespace TP4_TORNEOS
 		private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			
-			jugadorBindingSource.DataSource = OrdenaJugador();
+			
 		}
 
-		private List<Jugador> OrdenaJugador()
-		{
-			List<Jugador> jugadores = new List<Jugador>();
-			jugadores = pJugador.GetAll();
-			for (int i = 0; i < jugadores.Count - 1; i++)
-			{
-				if (jugadores[i].Equipo.Id < jugadores[i + 1].Equipo.Id)
-				{
-					Jugador j = new Jugador();
-					j = jugadores[i];
-					jugadores[i] = jugadores[i + 1];
-					jugadores[i + 1] = j;
-				}
-			}
-
-			return jugadores;
-		}
-
+	
 		private void metroComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
 		{
-			int a = metroComboBox1.SelectedIndex;
+			try
+			{
+				if (metroComboBox1.SelectedIndex + 1 == 1)
+				{
+					jugadorBindingSource.DataSource = null;
+					jugadorBindingSource.DataSource = pJugador.GetAll();
+				}
+
+					if (metroComboBox1.SelectedIndex == 1)
+				{
+					List<Jugador> todoslosjugadores = new List<Jugador>();
+					todoslosjugadores = pJugador.GetAll();
+
+					List<Goles> gols = new List<Goles>();
+					gols = pGoles.GetAll();
+
+					Jugador SelecionarJugador = (Jugador)jugadorBindingSource.Current;
+					int goles = pGoles.GetByJugador(SelecionarJugador.Id).Count();
+
+					List<Jugador> jugadoresordenados = new List<Jugador>();
+
+					for (int i = 0; i < todoslosjugadores.Count; i++)
+					{
+						for (int ii = 0; ii < gols.Count; ii++)
+						{
+							if (todoslosjugadores[i].Id == gols[ii].Jugador.Id)
+							{
+
+								jugadoresordenados.Add(todoslosjugadores[i]);
+
+
+							}
+
+						}
+					}
+
+					jugadorBindingSource.DataSource = null;
+					jugadorBindingSource.DataSource = jugadoresordenados;
+
+				}
+
+				if (metroComboBox1.SelectedIndex == 2)
+				{
+					List<Jugador> todoslosjugadores = new List<Jugador>();
+					todoslosjugadores = pJugador.GetAll();
+
+					List<TarjetaJugador> tarjetaJugadors = new List<TarjetaJugador>();
+					tarjetaJugadors = pTarjetaJugador.GetAll();
+					
+					List<Jugador> jugadoresordenadostarjeta = new List<Jugador>();
+
+					for (int i = 0; i < todoslosjugadores.Count; i++)
+					{
+						for (int ii = 0; ii < tarjetaJugadors.Count; ii++)
+						{
+							if (todoslosjugadores[i].Id == tarjetaJugadors[ii].Jugador.Id)
+							{
+
+								jugadoresordenadostarjeta.Add(todoslosjugadores[i]);
+
+
+							}
+
+						}
+					}
+
+					jugadorBindingSource.DataSource = null;
+					jugadorBindingSource.DataSource = jugadoresordenadostarjeta;
+
+				}
+
+
+			}
+			catch { }
+
+
 		}
 
 		private void metroGrid1_SelectionChanged(object sender, EventArgs e)
@@ -243,10 +301,12 @@ namespace TP4_TORNEOS
 				Jugador SelecionarJugador = (Jugador)jugadorBindingSource.Current;
 				
 				int goles = pGoles.GetByJugador(SelecionarJugador.Id).Count();
+				int tarjeta = pTarjetaJugador.GetByJugador(SelecionarJugador.Id).Count();
 				// obtener todos los goles
 				// recorrerlos y comparar a ver si son de ese jugador
 				// llevar un contador
 				lbGol.Text = goles.ToString();
+				lbTarjeta.Text = tarjeta.ToString();
 				lbPosicion.Text = SelecionarJugador.Posicion.Nombre;
 				lbCamiseta.Text = SelecionarJugador.NumeroCamiseta.ToString();
 				pictureBox1.Load(SelecionarJugador.UrlImagen);
