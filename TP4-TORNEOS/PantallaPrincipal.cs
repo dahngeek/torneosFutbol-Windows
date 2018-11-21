@@ -247,6 +247,7 @@ namespace TP4_TORNEOS
 
         private void metroTile2_Click(object sender, EventArgs e)
         {
+            audioBoton.Play();
             new frmEncuentro().ShowDialog();
         }
 
@@ -276,6 +277,7 @@ namespace TP4_TORNEOS
 
         private void metroPanel3_Click(object sender, EventArgs e)
         {
+            audioBoton.Play();
             new fmListar().ShowDialog();
         }
 
@@ -286,11 +288,13 @@ namespace TP4_TORNEOS
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
+            audioBoton.Play();
             new fmArbitro().ShowDialog();
         }
 
         private void metroPanel4_Click(object sender, EventArgs e)
         {
+            audioBoton.Play();
             new frmEncuentro().ShowDialog();
         }
 
@@ -306,11 +310,13 @@ namespace TP4_TORNEOS
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
+            audioBoton.Play();
             new TablaPosicionesEquipos().ShowDialog();
         }
 
         private void metroPanel5_Click(object sender, EventArgs e)
         {
+            audioBoton.Play();
             new TablaPosicionesEquipos().ShowDialog();
         }
 
@@ -327,6 +333,16 @@ namespace TP4_TORNEOS
         private void pictureBox6_MouseLeave(object sender, EventArgs e)
         {
             label3.ForeColor = Color.CornflowerBlue;
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
