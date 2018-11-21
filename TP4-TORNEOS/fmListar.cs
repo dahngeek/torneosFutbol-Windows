@@ -244,10 +244,10 @@ namespace TP4_TORNEOS
 						{
 							if (todoslosjugadores[i].Id == gols[ii].Jugador.Id)
 							{
-
+								
 								jugadoresordenados.Add(todoslosjugadores[i]);
 
-
+							
 							}
 
 						}
@@ -277,7 +277,8 @@ namespace TP4_TORNEOS
 
 								jugadoresordenadostarjeta.Add(todoslosjugadores[i]);
 
-
+								
+						
 							}
 
 						}
@@ -307,14 +308,14 @@ namespace TP4_TORNEOS
 				// obtener todos los goles
 				// recorrerlos y comparar a ver si son de ese jugador
 				// llevar un contador
+
+				lbequipo.Text = SelecionarJugador.Equipo.Nombre;
 				lbGol.Text = goles.ToString();
 				lbTarjeta.Text = tarjeta.ToString();
 				lbPosicion.Text = SelecionarJugador.Posicion.Nombre;
 				lbCamiseta.Text = SelecionarJugador.NumeroCamiseta.ToString();
 				pictureBox1.Load(SelecionarJugador.UrlImagen);
 
-
-			
 			
 			}
 			catch
