@@ -27,6 +27,13 @@ namespace TP4_TORNEOS
 
 			InitializeComponent();
 			pictureBox1.BackColor = Color.Transparent;
+            pictureBox2.BackColor = Color.Transparent;
+
+
+            pictureBox3.Parent = pictureBox2;
+            pictureBox3.Location = new Point(15,15);
+            pictureBox3.BackColor = Color.Transparent;
+
             equipoBindingSource.DataSource = OrdenaEquipos();
 			//audioFondo.Play();
 		}
@@ -177,12 +184,12 @@ namespace TP4_TORNEOS
 		{
             audioBoton.Play();
             //activar boton
-            this.label1.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_activo;
+            //this.label1.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_activo;
 
 			//desactivar boton
-			this.label2.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
-			this.label3.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
-			this.label4.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
+			//this.label2.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
+			//this.label3.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
+			//this.label4.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
 			//abre la ventana
 		}
 
@@ -190,12 +197,12 @@ namespace TP4_TORNEOS
 		{
             //activar boton
             audioBoton.Play();
-            this.label2.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_activo;
+            //this.label2.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_activo;
 
 			//desactivar boton
-			this.label1.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
-			this.label3.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
-			this.label4.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
+			//this.label1.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
+			//this.label3.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
+			//this.label4.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
 			//abre la ventana
 			
 		}
@@ -206,12 +213,12 @@ namespace TP4_TORNEOS
             // sonido
             //MusicCrear.Play();
 			//activar boton
-			this.label3.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_activo;
+			//this.label3.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_activo;
 
 			//desactivar boton
-			this.label1.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
-			this.label2.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
-			this.label4.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
+			//this.label1.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
+			//this.label2.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
+			//this.label4.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
 			//abre la ventana
 			new fmListar().ShowDialog();
             //MusicCrear.Stop();
@@ -221,12 +228,12 @@ namespace TP4_TORNEOS
 		{
 			audioBoton.Play();
 			//activar boton
-			this.label4.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_activo;
+			//this.label4.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_activo;
 
 			//desactivar boton
-			this.label2.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
-			this.label3.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
-			this.label3.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
+			//this.label2.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
+			//this.label3.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
+			//this.label3.Image = global::TP4_TORNEOS.Properties.Resources.bgbutton_normal;
 
 			//abre la ventana
 		
@@ -240,6 +247,35 @@ namespace TP4_TORNEOS
         private void metroTile2_Click(object sender, EventArgs e)
         {
             new frmEncuentro().ShowDialog();
+        }
+
+        private void metroTabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroPanel3_MouseHover(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.Orange;
+        }
+
+        private void metroPanel3_MouseLeave(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.CornflowerBlue;
+        }
+
+        private void metroPanel3_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroPanel3_Click(object sender, EventArgs e)
+        {
+            new fmListar().ShowDialog();
         }
     }
 }
