@@ -82,6 +82,12 @@
     <Compile Include="Entidades\Posicion.cs" />
     <Compile Include="Entidades\TarjetaJugador.cs" />
     <Compile Include="Entidades\TipoTarjeta.cs" />
+    <Compile Include="fmAgregarEncuentro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmAgregarEncuentro.Designer.cs">
+      <DependentUpon>fmAgregarEncuentro.cs</DependentUpon>
+    </Compile>
     <Compile Include="fmArbitro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     <Compile Include="TablaPosicionesEquipos.Designer.cs">
       <DependentUpon>TablaPosicionesEquipos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="fmAgregarEncuentro.resx">
+      <DependentUpon>fmAgregarEncuentro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmArbitro.resx">
       <DependentUpon>fmArbitro.cs</DependentUpon>
     </EmbeddedResource>
