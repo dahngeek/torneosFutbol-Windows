@@ -28,7 +28,8 @@ namespace TP4_TORNEOS
 			InitializeComponent();
 			pictureBox1.BackColor = Color.Transparent;
             pictureBox2.BackColor = Color.Transparent;
-
+            pictureBox5.BackColor = Color.Transparent;
+            pictureBox6.BackColor = Color.Transparent;
 
             pictureBox3.Parent = pictureBox2;
             pictureBox3.Location = new Point(15,15);
@@ -276,6 +277,56 @@ namespace TP4_TORNEOS
         private void metroPanel3_Click(object sender, EventArgs e)
         {
             new fmListar().ShowDialog();
+        }
+
+        private void arbitrosPanel_Click(object sender, EventArgs e)
+        {
+            new fmArbitro().ShowDialog();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            new fmArbitro().ShowDialog();
+        }
+
+        private void metroPanel4_Click(object sender, EventArgs e)
+        {
+            new frmEncuentro().ShowDialog();
+        }
+
+        private void metroPanel4_MouseHover(object sender, EventArgs e)
+        {
+            label2.ForeColor = Color.Orange;
+        }
+
+        private void metroPanel4_MouseLeave(object sender, EventArgs e)
+        {
+            label2.ForeColor = Color.CornflowerBlue;
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            new TablaPosicionesEquipos().ShowDialog();
+        }
+
+        private void metroPanel5_Click(object sender, EventArgs e)
+        {
+            new TablaPosicionesEquipos().ShowDialog();
+        }
+
+        private void pictureBox6_MouseHover(object sender, EventArgs e)
+        {
+            label3.ForeColor = Color.Orange;
+        }
+
+        private void metroPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_MouseLeave(object sender, EventArgs e)
+        {
+            label3.ForeColor = Color.CornflowerBlue;
         }
     }
 }

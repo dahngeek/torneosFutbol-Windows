@@ -29,15 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btJugador = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.arbitrosPanel = new MetroFramework.Controls.MetroPanel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
@@ -50,12 +58,8 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.mtpJugadores = new MetroFramework.Controls.MetroTabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.puntosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,13 +69,18 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.btJugador.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
+            this.metroPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.metroPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.arbitrosPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.metroPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
-            this.metroTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -103,8 +112,6 @@
             this.btJugador.AccessibleName = "";
             this.btJugador.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.btJugador.Controls.Add(this.metroTabPage1);
-            this.btJugador.Controls.Add(this.metroTabPage2);
-            this.btJugador.Controls.Add(this.mtpJugadores);
             this.btJugador.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btJugador.Dock = System.Windows.Forms.DockStyle.Right;
             this.btJugador.FontSize = MetroFramework.MetroTabControlSize.Tall;
@@ -127,6 +134,9 @@
             // 
             this.metroTabPage1.BackgroundImage = global::TP4_TORNEOS.Properties.Resources.blurred;
             this.metroTabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.metroTabPage1.Controls.Add(this.metroPanel5);
+            this.metroTabPage1.Controls.Add(this.metroPanel4);
+            this.metroTabPage1.Controls.Add(this.arbitrosPanel);
             this.metroTabPage1.Controls.Add(this.metroPanel3);
             this.metroTabPage1.Controls.Add(this.metroPanel2);
             this.metroTabPage1.Controls.Add(this.metroPanel1);
@@ -142,6 +152,104 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             this.metroTabPage1.Click += new System.EventHandler(this.metroTabPage1_Click);
+            // 
+            // metroPanel5
+            // 
+            this.metroPanel5.Controls.Add(this.label3);
+            this.metroPanel5.Controls.Add(this.pictureBox6);
+            this.metroPanel5.HorizontalScrollbarBarColor = true;
+            this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel5.HorizontalScrollbarSize = 10;
+            this.metroPanel5.Location = new System.Drawing.Point(4, 262);
+            this.metroPanel5.Name = "metroPanel5";
+            this.metroPanel5.Size = new System.Drawing.Size(493, 189);
+            this.metroPanel5.TabIndex = 10;
+            this.metroPanel5.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroPanel5.VerticalScrollbarBarColor = true;
+            this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel5.VerticalScrollbarSize = 10;
+            this.metroPanel5.Click += new System.EventHandler(this.metroPanel5_Click);
+            this.metroPanel5.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel5_Paint);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::TP4_TORNEOS.Properties.Resources.bio_stats_bg;
+            this.pictureBox6.Location = new System.Drawing.Point(95, -46);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(406, 260);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 2;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.pictureBox6.MouseLeave += new System.EventHandler(this.pictureBox6_MouseLeave);
+            this.pictureBox6.MouseHover += new System.EventHandler(this.pictureBox6_MouseHover);
+            // 
+            // metroPanel4
+            // 
+            this.metroPanel4.Controls.Add(this.pictureBox5);
+            this.metroPanel4.Controls.Add(this.label2);
+            this.metroPanel4.HorizontalScrollbarBarColor = true;
+            this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel4.HorizontalScrollbarSize = 10;
+            this.metroPanel4.Location = new System.Drawing.Point(3, 3);
+            this.metroPanel4.Name = "metroPanel4";
+            this.metroPanel4.Size = new System.Drawing.Size(494, 252);
+            this.metroPanel4.TabIndex = 9;
+            this.metroPanel4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroPanel4.VerticalScrollbarBarColor = true;
+            this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel4.VerticalScrollbarSize = 10;
+            this.metroPanel4.Click += new System.EventHandler(this.metroPanel4_Click);
+            this.metroPanel4.MouseLeave += new System.EventHandler(this.metroPanel4_MouseLeave);
+            this.metroPanel4.MouseHover += new System.EventHandler(this.metroPanel4_MouseHover);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::TP4_TORNEOS.Properties.Resources._1270600965_86282004_1_balones_de_Futbol_universodeldeportecom_Santa_Maria_del_Lago_1270600965;
+            this.pictureBox5.Location = new System.Drawing.Point(257, 87);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(237, 174);
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label2.Location = new System.Drawing.Point(24, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(278, 55);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Encuentros";
+            // 
+            // arbitrosPanel
+            // 
+            this.arbitrosPanel.Controls.Add(this.pictureBox4);
+            this.arbitrosPanel.HorizontalScrollbarBarColor = true;
+            this.arbitrosPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.arbitrosPanel.HorizontalScrollbarSize = 10;
+            this.arbitrosPanel.Location = new System.Drawing.Point(503, 3);
+            this.arbitrosPanel.Name = "arbitrosPanel";
+            this.arbitrosPanel.Size = new System.Drawing.Size(174, 140);
+            this.arbitrosPanel.TabIndex = 8;
+            this.arbitrosPanel.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.arbitrosPanel.VerticalScrollbarBarColor = true;
+            this.arbitrosPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.arbitrosPanel.VerticalScrollbarSize = 10;
+            this.arbitrosPanel.Click += new System.EventHandler(this.arbitrosPanel_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::TP4_TORNEOS.Properties.Resources.firefox_2018_11_18_20_24_251;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(168, 132);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // metroPanel3
             // 
@@ -163,6 +271,19 @@
             this.metroPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel3_Paint);
             this.metroPanel3.MouseLeave += new System.EventHandler(this.metroPanel3_MouseLeave);
             this.metroPanel3.MouseHover += new System.EventHandler(this.metroPanel3_MouseHover);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label1.Location = new System.Drawing.Point(16, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 33);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Jugadores";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // pictureBox3
             // 
@@ -286,21 +407,21 @@
             this.metroGrid1.AllowUserToAddRows = false;
             this.metroGrid1.AllowUserToDeleteRows = false;
             this.metroGrid1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.metroGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.metroGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.metroGrid1.AutoGenerateColumns = false;
             this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.metroGrid1.ColumnHeadersHeight = 30;
             this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -309,14 +430,14 @@
             this.golesFavorDataGridViewTextBoxColumn,
             this.golesContraDataGridViewTextBoxColumn});
             this.metroGrid1.DataSource = this.equipoBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle23;
             this.metroGrid1.Enabled = false;
             this.metroGrid1.EnableHeadersVisualStyles = false;
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -326,18 +447,18 @@
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.ReadOnly = true;
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.metroGrid1.RowHeadersWidth = 75;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.metroGrid1.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.metroGrid1.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.metroGrid1.RowTemplate.Height = 35;
             this.metroGrid1.RowTemplate.ReadOnly = true;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -356,66 +477,6 @@
             this.metroLabel1.Text = "TABLA DE POSICIONES";
             this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.BackgroundImage = global::TP4_TORNEOS.Properties.Resources.blurred;
-            this.metroTabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroTabPage2.Controls.Add(this.metroTile2);
-            this.metroTabPage2.Controls.Add(this.metroTile1);
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 49);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.metroTabPage2.Size = new System.Drawing.Size(1072, 457);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "EQUIPOS";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
-            this.metroTabPage2.Click += new System.EventHandler(this.metroTabPage2_Click);
-            // 
-            // metroTile2
-            // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(530, 4);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(256, 140);
-            this.metroTile2.TabIndex = 3;
-            this.metroTile2.Text = "metroTile2";
-            this.metroTile2.UseSelectable = true;
-            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
-            // 
-            // metroTile1
-            // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(3, 3);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(510, 142);
-            this.metroTile1.TabIndex = 2;
-            this.metroTile1.Text = "metroTile1";
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click_1);
-            // 
-            // mtpJugadores
-            // 
-            this.mtpJugadores.BackgroundImage = global::TP4_TORNEOS.Properties.Resources.blurred;
-            this.mtpJugadores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.mtpJugadores.HorizontalScrollbarBarColor = true;
-            this.mtpJugadores.HorizontalScrollbarHighlightOnWheel = false;
-            this.mtpJugadores.HorizontalScrollbarSize = 8;
-            this.mtpJugadores.Location = new System.Drawing.Point(4, 49);
-            this.mtpJugadores.Margin = new System.Windows.Forms.Padding(2);
-            this.mtpJugadores.Name = "mtpJugadores";
-            this.mtpJugadores.Size = new System.Drawing.Size(1072, 457);
-            this.mtpJugadores.TabIndex = 2;
-            this.mtpJugadores.Text = "JUGADORES";
-            this.mtpJugadores.VerticalScrollbarBarColor = true;
-            this.mtpJugadores.VerticalScrollbarHighlightOnWheel = false;
-            this.mtpJugadores.VerticalScrollbarSize = 8;
-            this.mtpJugadores.Click += new System.EventHandler(this.mtpJugadores_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -428,18 +489,17 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label1.Location = new System.Drawing.Point(16, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 33);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Jugadores";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label3.Location = new System.Drawing.Point(44, 73);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(149, 39);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Equipos";
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -495,6 +555,14 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.btJugador.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
+            this.metroPanel5.ResumeLayout(false);
+            this.metroPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.metroPanel4.ResumeLayout(false);
+            this.metroPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.arbitrosPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.metroPanel3.ResumeLayout(false);
             this.metroPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -504,7 +572,6 @@
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
-            this.metroTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -516,9 +583,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private MetroFramework.Controls.MetroTabControl btJugador;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel3;
@@ -529,8 +594,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-		private MetroFramework.Controls.MetroTabPage mtpJugadores;
-        private MetroFramework.Controls.MetroTile metroTile2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn puntosDataGridViewTextBoxColumn;
@@ -541,5 +604,13 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroPanel arbitrosPanel;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private MetroFramework.Controls.MetroPanel metroPanel4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label2;
+        private MetroFramework.Controls.MetroPanel metroPanel5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -63,6 +63,17 @@ namespace TP4_TORNEOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1270600965_86282004_1_balones_de_Futbol_universodeldeportecom_Santa_Maria_del_Lago_1270600965 {
+            get {
+                object obj = ResourceManager.GetObject("1270600965_86282004_1-balones-de-Futbol-universodeldeportecom-Santa-Maria-del-Lag" +
+                        "o-1270600965", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _158023 {
             get {
                 object obj = ResourceManager.GetObject("158023", resourceCulture);
@@ -106,6 +117,16 @@ namespace TP4_TORNEOS.Properties {
         internal static System.Drawing.Bitmap bgbutton_normal {
             get {
                 object obj = ResourceManager.GetObject("bgbutton-normal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bio_stats_bg {
+            get {
+                object obj = ResourceManager.GetObject("bio-stats-bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,6 +204,16 @@ namespace TP4_TORNEOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Equipos1 {
+            get {
+                object obj = ResourceManager.GetObject("Equipos1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap esrb {
             get {
                 object obj = ResourceManager.GetObject("esrb", resourceCulture);
@@ -213,9 +244,9 @@ namespace TP4_TORNEOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FONDO {
+        internal static System.Drawing.Bitmap firefox_2018_11_18_20_24_251 {
             get {
-                object obj = ResourceManager.GetObject("FONDO", resourceCulture);
+                object obj = ResourceManager.GetObject("firefox_2018-11-18_20-24-251", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +254,9 @@ namespace TP4_TORNEOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap jonathan_petersson_210341 {
+        internal static System.Drawing.Bitmap FONDO {
             get {
-                object obj = ResourceManager.GetObject("jonathan_petersson_210341", resourceCulture);
+                object obj = ResourceManager.GetObject("FONDO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
