@@ -130,6 +130,12 @@
     <Compile Include="fmNuevoJugador.Designer.cs">
       <DependentUpon>fmNuevoJugador.cs</DependentUpon>
     </Compile>
+    <Compile Include="fmTarjetaJugador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmTarjetaJugador.Designer.cs">
+      <DependentUpon>fmTarjetaJugador.cs</DependentUpon>
+    </Compile>
     <Compile Include="fmVenderJugador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fmNuevoJugador.resx">
       <DependentUpon>fmNuevoJugador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmTarjetaJugador.resx">
+      <DependentUpon>fmTarjetaJugador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmVenderJugador.resx">
       <DependentUpon>fmVenderJugador.cs</DependentUpon>

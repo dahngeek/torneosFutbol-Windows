@@ -21,6 +21,7 @@ namespace TP4_TORNEOS
 		{
 			InitializeComponent();
 			jugadorBindingSource.DataSource = pJugador.GetAll();
+			tarjetaJugadorBindingSource.DataSource = pTarjetaJugador.GetAll();
 			SoundPlayer audioBoton = new SoundPlayer("sonidoBt.wav");
 
             // Transparencia para las imagenes.
@@ -299,7 +300,8 @@ namespace TP4_TORNEOS
 			try
 			{
 				Jugador SelecionarJugador = (Jugador)jugadorBindingSource.Current;
-				
+				tarjetaJugadorBindingSource.DataSource = pTarjetaJugador.GetByJugador(SelecionarJugador.Id);
+
 				int goles = pGoles.GetByJugador(SelecionarJugador.Id).Count();
 				int tarjeta = pTarjetaJugador.GetByJugador(SelecionarJugador.Id).Count();
 				// obtener todos los goles
@@ -310,6 +312,10 @@ namespace TP4_TORNEOS
 				lbPosicion.Text = SelecionarJugador.Posicion.Nombre;
 				lbCamiseta.Text = SelecionarJugador.NumeroCamiseta.ToString();
 				pictureBox1.Load(SelecionarJugador.UrlImagen);
+
+
+			
+			
 			}
 			catch
 			{
@@ -320,5 +326,6 @@ namespace TP4_TORNEOS
 		{
 		
 		}
+
 	}
 }

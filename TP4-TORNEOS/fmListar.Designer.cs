@@ -32,6 +32,9 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmListar));
 			this.tarjetaJugador = new System.Windows.Forms.PictureBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -47,7 +50,6 @@
 			this.mBtModificar = new MetroFramework.Controls.MetroButton();
 			this.mBtBorrar = new MetroFramework.Controls.MetroButton();
 			this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-			this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
 			this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,10 +58,20 @@
 			this.equipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.posicionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.jugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+			this.lbDetalles = new MetroFramework.Controls.MetroButton();
+			this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
+			this.tarjetaJugadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.minutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.tarjetaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.jugadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.tarjetaJugador)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.jugadorBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.tarjetaJugadorBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tarjetaJugador
@@ -259,30 +271,12 @@
 			this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
 			this.metroGrid1.RowTemplate.Height = 24;
 			this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.metroGrid1.Size = new System.Drawing.Size(742, 372);
+			this.metroGrid1.Size = new System.Drawing.Size(742, 151);
 			this.metroGrid1.Style = MetroFramework.MetroColorStyle.Teal;
 			this.metroGrid1.TabIndex = 21;
 			this.metroGrid1.Theme = MetroFramework.MetroThemeStyle.Dark;
 			this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
 			this.metroGrid1.SelectionChanged += new System.EventHandler(this.metroGrid1_SelectionChanged);
-			// 
-			// metroComboBox1
-			// 
-			this.metroComboBox1.ForeColor = System.Drawing.Color.White;
-			this.metroComboBox1.FormattingEnabled = true;
-			this.metroComboBox1.ItemHeight = 24;
-			this.metroComboBox1.Items.AddRange(new object[] {
-            "Listar todos Los Jugadores",
-            "Ordenar por Goles",
-            "Ordenar por Tarjetas"});
-			this.metroComboBox1.Location = new System.Drawing.Point(633, 53);
-			this.metroComboBox1.Name = "metroComboBox1";
-			this.metroComboBox1.Size = new System.Drawing.Size(484, 30);
-			this.metroComboBox1.Style = MetroFramework.MetroColorStyle.White;
-			this.metroComboBox1.TabIndex = 23;
-			this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
-			this.metroComboBox1.UseSelectable = true;
-			this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged_1);
 			// 
 			// idDataGridViewTextBoxColumn
 			// 
@@ -337,6 +331,122 @@
 			// 
 			this.jugadorBindingSource.DataSource = typeof(TP4_TORNEOS.Entidades.Jugador);
 			// 
+			// metroComboBox1
+			// 
+			this.metroComboBox1.ForeColor = System.Drawing.Color.White;
+			this.metroComboBox1.FormattingEnabled = true;
+			this.metroComboBox1.ItemHeight = 24;
+			this.metroComboBox1.Items.AddRange(new object[] {
+            "Listar todos Los Jugadores",
+            "Ordenar por Goles",
+            "Ordenar por Tarjetas"});
+			this.metroComboBox1.Location = new System.Drawing.Point(633, 53);
+			this.metroComboBox1.Name = "metroComboBox1";
+			this.metroComboBox1.Size = new System.Drawing.Size(484, 30);
+			this.metroComboBox1.Style = MetroFramework.MetroColorStyle.White;
+			this.metroComboBox1.TabIndex = 23;
+			this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
+			this.metroComboBox1.UseSelectable = true;
+			this.metroComboBox1.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged_1);
+			// 
+			// lbDetalles
+			// 
+			this.lbDetalles.Location = new System.Drawing.Point(151, 441);
+			this.lbDetalles.Name = "lbDetalles";
+			this.lbDetalles.Size = new System.Drawing.Size(75, 23);
+			this.lbDetalles.TabIndex = 24;
+			this.lbDetalles.Text = "Detalles";
+			this.lbDetalles.Theme = MetroFramework.MetroThemeStyle.Dark;
+			this.lbDetalles.UseSelectable = true;
+			// 
+			// metroGrid2
+			// 
+			this.metroGrid2.AllowUserToAddRows = false;
+			this.metroGrid2.AllowUserToDeleteRows = false;
+			this.metroGrid2.AllowUserToResizeRows = false;
+			this.metroGrid2.AutoGenerateColumns = false;
+			this.metroGrid2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+			this.metroGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.metroGrid2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+			this.metroGrid2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.metroGrid2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			this.metroGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.metroGrid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.minutoDataGridViewTextBoxColumn,
+            this.tarjetaDataGridViewTextBoxColumn,
+            this.jugadorDataGridViewTextBoxColumn});
+			this.metroGrid2.DataSource = this.tarjetaJugadorBindingSource;
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.metroGrid2.DefaultCellStyle = dataGridViewCellStyle5;
+			this.metroGrid2.EnableHeadersVisualStyles = false;
+			this.metroGrid2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.metroGrid2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+			this.metroGrid2.Location = new System.Drawing.Point(399, 264);
+			this.metroGrid2.Name = "metroGrid2";
+			this.metroGrid2.ReadOnly = true;
+			this.metroGrid2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(173)))));
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.metroGrid2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			this.metroGrid2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+			this.metroGrid2.RowTemplate.Height = 24;
+			this.metroGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.metroGrid2.Size = new System.Drawing.Size(615, 150);
+			this.metroGrid2.Style = MetroFramework.MetroColorStyle.Teal;
+			this.metroGrid2.TabIndex = 25;
+			this.metroGrid2.Theme = MetroFramework.MetroThemeStyle.Dark;
+			// 
+			// tarjetaJugadorBindingSource
+			// 
+			this.tarjetaJugadorBindingSource.DataSource = typeof(TP4_TORNEOS.Entidades.TarjetaJugador);
+			// 
+			// idDataGridViewTextBoxColumn1
+			// 
+			this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
+			this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
+			this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+			this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+			// 
+			// minutoDataGridViewTextBoxColumn
+			// 
+			this.minutoDataGridViewTextBoxColumn.DataPropertyName = "Minuto";
+			this.minutoDataGridViewTextBoxColumn.HeaderText = "Minuto";
+			this.minutoDataGridViewTextBoxColumn.Name = "minutoDataGridViewTextBoxColumn";
+			this.minutoDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// tarjetaDataGridViewTextBoxColumn
+			// 
+			this.tarjetaDataGridViewTextBoxColumn.DataPropertyName = "Tarjeta";
+			this.tarjetaDataGridViewTextBoxColumn.HeaderText = "Tarjeta";
+			this.tarjetaDataGridViewTextBoxColumn.Name = "tarjetaDataGridViewTextBoxColumn";
+			this.tarjetaDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
+			// jugadorDataGridViewTextBoxColumn
+			// 
+			this.jugadorDataGridViewTextBoxColumn.DataPropertyName = "Jugador";
+			this.jugadorDataGridViewTextBoxColumn.HeaderText = "Jugador";
+			this.jugadorDataGridViewTextBoxColumn.Name = "jugadorDataGridViewTextBoxColumn";
+			this.jugadorDataGridViewTextBoxColumn.ReadOnly = true;
+			// 
 			// fmListar
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(26F, 45F);
@@ -344,6 +454,8 @@
 			this.AutoSize = true;
 			this.BackgroundImage = global::TP4_TORNEOS.Properties.Resources.FONDO;
 			this.ClientSize = new System.Drawing.Size(1185, 512);
+			this.Controls.Add(this.metroGrid2);
+			this.Controls.Add(this.lbDetalles);
 			this.Controls.Add(this.metroComboBox1);
 			this.Controls.Add(this.metroGrid1);
 			this.Controls.Add(this.mBtBorrar);
@@ -377,6 +489,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.jugadorBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.tarjetaJugadorBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -407,5 +521,12 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn equipoDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn posicionDataGridViewTextBoxColumn;
 		private MetroFramework.Controls.MetroComboBox metroComboBox1;
+		private MetroFramework.Controls.MetroButton lbDetalles;
+		private MetroFramework.Controls.MetroGrid metroGrid2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn minutoDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn tarjetaDataGridViewTextBoxColumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn jugadorDataGridViewTextBoxColumn;
+		private System.Windows.Forms.BindingSource tarjetaJugadorBindingSource;
 	}
 }
