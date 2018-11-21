@@ -16,8 +16,8 @@ namespace TP4_TORNEOS.Controladores
             //Creo el comando sql a utlizar
             SQLiteCommand cmd = new SQLiteCommand("INSERT INTO CambiosEncuentro (idJugadorSaliente, idJugadorEntrante, idEncuentro, minuto) VALUES (@idJugadorSaliente, @idJugadorEntrante, @idEncuentro, @minuto);");
             //Cargo el valor del parametro
-            cmd.Parameters.Add(new SQLiteParameter("@idJugador", ce.JugadorSaliente.Id));
-            cmd.Parameters.Add(new SQLiteParameter("@idJugador", ce.JugadorEntrante.Id));
+            cmd.Parameters.Add(new SQLiteParameter("@idJugadorSaliente", ce.JugadorSaliente.Id));
+            cmd.Parameters.Add(new SQLiteParameter("@idJugadorEntrante", ce.JugadorEntrante.Id));
             cmd.Parameters.Add(new SQLiteParameter("@idEncuentro", ce.Encuentro.Id));
             cmd.Parameters.Add(new SQLiteParameter("@minuto", ce.Minuto));
 

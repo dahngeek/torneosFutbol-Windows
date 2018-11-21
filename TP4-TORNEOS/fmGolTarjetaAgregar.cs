@@ -11,16 +11,24 @@ using TP4_TORNEOS.Entidades;
 
 namespace TP4_TORNEOS
 {
-    public partial class fmGolAgregar : MetroFramework.Forms.MetroForm
+    public partial class fmGolTarjetaAgregar : MetroFramework.Forms.MetroForm
     {
         int idencuentro;
-        public fmGolAgregar(int id)
+        enum TipoVentana { AgregarGol, AgregarTarjeta }
+        int tipoOperacion = 0;
+        public fmGolTarjetaAgregar(int id, int tipo)
         {
             InitializeComponent();
             idencuentro = id;
             Encuentro adefinir = Controladores.pEncuentro.GetById(idencuentro);
             equipoBindingSource.Add(adefinir.EquipoLocal);
             equipoBindingSource.Add(adefinir.EquipoVisitante);
+            this.tipoOperacion = tipo;
+            if (tipoOperacion == (int)TipoVentana.AgregarTarjeta) {
+                boxTarjeta.Visible = true;
+                labelTarjeta.Visible = true;
+                tipoTarjetaBindingSource.DataSource = Controladores.pTipoTarjeta.GetAll();
+            }
         }
 
         private void btAceptar_Click(object sender, EventArgs e)
@@ -29,8 +37,17 @@ namespace TP4_TORNEOS
             Jugador goleador = (Jugador)jugadorBindingSource.Current;
             int minuto = int.Parse(minuteBox.Text);
             Encuentro encu = Controladores.pEncuentro.GetById(idencuentro);
-            Goles nuevo = new Goles(0, goleador, paraelgol, encu, minuto);
-            Controladores.pGoles.Save(nuevo);
+
+            if (tipoOperacion == (int)TipoVentana.AgregarGol) {
+                Goles nuevo = new Goles(0, goleador, paraelgol, encu, minuto);
+                Controladores.pGoles.Save(nuevo);
+            }
+            else if (tipoOperacion == (int)TipoVentana.AgregarTarjeta)
+            {
+                TipoTarjeta tipo = (TipoTarjeta)tipoTarjetaBindingSource.Current;
+                TarjetaJugador tarj = new TarjetaJugador(0, tipo, goleador, encu, minuto);
+                Controladores.pTarjetaJugador.Save(tarj);
+            }
             Close();
         }
 
@@ -52,6 +69,11 @@ namespace TP4_TORNEOS
         {
             Equipo eq = (Equipo)equipoBindingSource.Current;
             jugadorBindingSource.DataSource = Controladores.pJugador.GetByEquipo(eq.Id);
+        }
+
+        private void fmGolTarjetaAgregar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

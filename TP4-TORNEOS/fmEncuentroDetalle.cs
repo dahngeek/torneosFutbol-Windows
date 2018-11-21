@@ -16,7 +16,9 @@ namespace TP4_TORNEOS
         List<Goles> goles;
         List<CambiosEncuentro> cambios;
         List<TarjetaJugador> tarjetas;
+        List<string[]> ordenada;
         int idencuentro;
+        enum TipoVentana { AgregarGol, AgregarTarjeta }
 
         public fmEncuentroDetalle(int idEncuentro)
         {
@@ -86,7 +88,7 @@ namespace TP4_TORNEOS
                 string[] row = { t.Id.ToString(), "Cambio", t.JugadorEntrante.Equipo.Nombre, t.JugadorSaliente.NumeroCamiseta.ToString()+" ["+t.JugadorSaliente.Apodo+"]"+ " <=> "+t.JugadorEntrante.NumeroCamiseta.ToString()+" ["+t.JugadorEntrante.Apodo+"]" , t.Minuto.ToString() };
                 lista.Add(row);
             }
-            List<string[]> ordenada = lista.OrderBy(o=>o[4]).ToList();
+            ordenada = lista.OrderBy(o=>o[4]).ToList();
             foreach (string[] s in ordenada) {
                 registroTable.Rows.Add(s);
             }
@@ -99,7 +101,44 @@ namespace TP4_TORNEOS
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            new fmGolAgregar(idencuentro).ShowDialog();
+            new fmGolTarjetaAgregar(idencuentro, (int)TipoVentana.AgregarGol).ShowDialog();
+            generarTabla();
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            new fmGolTarjetaAgregar(idencuentro, (int)TipoVentana.AgregarTarjeta).ShowDialog();
+            generarTabla();
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            new frmAgregarCambioEncuentro(idencuentro).ShowDialog();
+            generarTabla();
+        }
+
+        private void metroButton2_Click_1(object sender, EventArgs e)
+        {
+            int indicefila = registroTable.CurrentRow.Index;
+            string[] fila = ordenada[indicefila];
+            int id = int.Parse(fila[0]);
+            switch (fila[1])
+            {
+                case "Tarjeta":
+                    TarjetaJugador tj = Controladores.pTarjetaJugador.GetById(id);
+                    Controladores.pTarjetaJugador.Delete(tj);
+                    break;
+                case "Gol":
+                    Goles gl = Controladores.pGoles.GetById(id);
+                    Controladores.pGoles.Delete(gl);
+                    break;
+                case "Cambio":
+                    CambiosEncuentro cb = Controladores.pCambiosEncuentro.GetById(id);
+                    Controladores.pCambiosEncuentro.Delete(cb);
+                    break;
+                default:
+                    break;
+            }
             generarTabla();
         }
     }

@@ -100,11 +100,11 @@
     <Compile Include="fmEncuentroDetalle.Designer.cs">
       <DependentUpon>fmEncuentroDetalle.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmGolAgregar.cs">
+    <Compile Include="fmGolTarjetaAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fmGolAgregar.Designer.cs">
-      <DependentUpon>fmGolAgregar.cs</DependentUpon>
+    <Compile Include="fmGolTarjetaAgregar.Designer.cs">
+      <DependentUpon>fmGolTarjetaAgregar.cs</DependentUpon>
     </Compile>
     <Compile Include="fmListar.cs">
       <SubType>Form</SubType>
@@ -136,6 +136,12 @@
     <Compile Include="fmVenderJugador.Designer.cs">
       <DependentUpon>fmVenderJugador.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAgregarCambioEncuentro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarCambioEncuentro.Designer.cs">
+      <DependentUpon>frmAgregarCambioEncuentro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEncuentro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,8 +171,8 @@
     <EmbeddedResource Include="fmEncuentroDetalle.resx">
       <DependentUpon>fmEncuentroDetalle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fmGolAgregar.resx">
-      <DependentUpon>fmGolAgregar.cs</DependentUpon>
+    <EmbeddedResource Include="fmGolTarjetaAgregar.resx">
+      <DependentUpon>fmGolTarjetaAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmListar.resx">
       <DependentUpon>fmListar.cs</DependentUpon>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fmVenderJugador.resx">
       <DependentUpon>fmVenderJugador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarCambioEncuentro.resx">
+      <DependentUpon>frmAgregarCambioEncuentro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEncuentro.resx">
       <DependentUpon>frmEncuentro.cs</DependentUpon>
