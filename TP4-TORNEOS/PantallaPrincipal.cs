@@ -12,6 +12,9 @@ using MetroFramework.Forms;
 using MetroFramework;
 using System.Media;
 
+using TP4_TORNEOS.Controladores;
+using TP4_TORNEOS.Entidades;
+
 namespace TP4_TORNEOS
 {
 	public partial class PantallaPrincipal : Form
@@ -24,6 +27,7 @@ namespace TP4_TORNEOS
 
 			InitializeComponent();
 			pictureBox1.BackColor = Color.Transparent;
+            equipoBindingSource.DataSource = OrdenaEquipos();
 			//audioFondo.Play();
 		}
 
@@ -36,7 +40,49 @@ namespace TP4_TORNEOS
 
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+        private List<Equipo> OrdenaEquipos()
+        {
+            bool cambios = false;
+
+            List<Equipo> equipos = new List<Equipo>();
+            equipos = pEquipo.GetAll();
+
+            do
+            {
+
+                cambios = false;
+
+                for (int i = 0; i < equipos.Count - 1; i++)
+                {
+                    if (equipos[i].Puntos < equipos[i + 1].Puntos)
+                    {
+                        Equipo e = new Equipo();
+                        e = equipos[i];
+                        equipos[i] = equipos[i + 1];
+                        equipos[i + 1] = e;
+                        cambios = true;
+                    }
+
+                    if (equipos[i].Puntos == equipos[i + 1].Puntos)
+                    {
+                        if (equipos[i].GolesFavor < equipos[i + 1].GolesFavor)
+                        {
+                            Equipo e = new Equipo();
+                            e = equipos[i];
+                            equipos[i] = equipos[i + 1];
+                            equipos[i + 1] = e;
+                            cambios = true;
+                        }
+                    }
+
+
+                }
+
+            } while (cambios);
+            return equipos;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
 		{
 			MetroMessageBox.Show(this, "This is a sample MetroMessagebox `Yes` and `No` button", "MetroMessagebox", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 		}
